@@ -1,0 +1,173 @@
+<!-- <div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div class="coluna-esquerda largura-1_1"
+    style="display: flex;justify-content: center;align-items: center;height: 380px;flex-direction: column;">
+    <div class="animate__animated animate__backInLeft">
+        <div
+            style="background-color: #edebd5;border-radius: 20px; width: 735px; display: flex;align-items: center;justify-content: center;flex-direction: row;border-width: 15px;border-style: double;border-color: white;padding: 20px 30px; gap: 40px; margin-top: -60px;">
+            <div style="width: 496px;">
+                <h1>Dica técnica</h1>
+                <p>Ao prescrever uma droga vegetal rasurada, recomenda-se que o profissional, sempre que possível,
+                    apresente ao paciente ou ao cuidador uma imagem da parte da planta utilizada. Para isso, é
+                    aconselhável utilizar fontes confiáveis, como os sites botânicos: Flora e Funga do Brasil.</p>
+
+                <p>(<a href="https://reflora.jbrj.gov.br/reflora/listaBrasil/ConsultaPublicaUC/ConsultaPublicaUC.do#CondicaoTaxonCP"
+                        target="_blank">https://reflora.jbrj.gov.br/reflora/listaBrasil/ConsultaPublicaUC/ConsultaPublicaUC.do#CondicaoTaxonCP</a>),
+                    Tropicos (<a href="http://www.tropicos.org/" target="_blank">http://www.tropicos.org/</a>),
+                    International Plant Names Index (<a href="http://www.ipni.org/"
+                        target="_blank">http://www.ipni.org/</a>), World
+                    Flora Online (<a href="http://www.worldfloraonline.org/"
+                        target="_blank">http://www.worldfloraonline.org/</a>) ou Plants of the World Online
+                    (<a href="https://powo.science.kew.org" target="_blank">https://powo.science.kew.org</a>).</p>
+                <p>O profissional também pode orientar o paciente a adquirir a droga vegetal em farmácias que trabalham
+                    com fitoterápicos, evitando a compra em supermercados, mercados municipais ou lojas de produtos
+                    naturais. Outra alternativa é o fornecimento de uma muda certificada, permitindo que o próprio
+                    paciente cultive sua planta medicinal, desde que a utilização da planta fresca seja viável.</p>
+                <p><b>Clique</b> na imagem e veja um exemplo.</p>
+            </div>
+            <div style="text-align: center;">
+                <p style="font-size: 8px;text-align: center;">Folhas frescas da <i>Monteverdia ilicifolia</i> (Mart. ex
+                    Reissek) Biral.</p>
+                <img id="botao_1" src="recursos/imgs/DAF_FITO_M1A2_RIM_ilustra06.svg" style="height: 241px;">
+                <p style="font-size: 8px;">Fonte: <a
+                        href="https://floradobrasil.jbrj.gov.br/reflora/listaBrasil/ConsultaPublicaUC/BemVindoConsultaPublicaConsultar.do?invalidatePageControlCounter=1&idsFilhosAlgas=%5B2%5D&idsFilhosFungos=%5B1%2C11%2C10%5D&lingua=&grupo=6&familia=null&genero=&especie=&autor=&nomeVernaculo=&nomeCompleto=Celastraceae+Monteverdia+ilicifolia+%28Mart.+ex+Reissek%29+Biral&formaVida=null&substrato=null&ocorreBrasil=QUALQUER&ocorrencia=OCORRE&endemismo=TODOS&origem=TODOS&regiao=QUALQUER&estado=QUALQUER&ilhaOceanica=32767&domFitogeograficos=QUALQUER&bacia=QUALQUER&vegetacao=TODOS&mostrarAte=SUBESP_VAR&opcoesBusca=TODOS_OS_NOMES&loginUsuario=Visitante&senhaUsuario=&contexto=consulta-publica"
+                        target="_blank">Flora e Funga do Brasil. Monteverdia ilicifolia (Mart. ex Reissek) Biral (Biral,
+                        s.d.)</a>. </p>
+            </div>
+        </div>
+    </div>
+    <div id="janela_1"
+        style="position: absolute;background-color: rgb(237, 235, 211);top: 110px;left: 62px;width: 685px;border-radius: 16px;padding: 26px 42px;">
+        <div>
+            <p>
+                Por exemplo, a foto da folha de <i>Monteverdia ilicifolia</i> (espinheira-santa) pode ser apresentada ao
+                paciente para que possa certificar-se de estar utilizando a espécie correta e a parte correta da planta
+                medicinal. Espécies incorretamente utilizadas podem resultar em ineficácia (p. ex. <i>Sorocea
+                    bonplandii</i>) ou toxicidade (p. ex. <i>Ilex aquifolium</i>). Nas monografias de plantas medicinais
+                apresentadas neste curso, muitas vezes você irá encontrar a fotografia da droga vegetal seca e o aspecto
+                do infuso ou decocto. Observe!
+            </p>
+            <div style="text-align: center;">
+                <p style="text-align: center;"><b>Preparo do infuso de <i>Monteverdia ilicifolia (Maytenus
+                            ilicifolia)</i>.</b></p>
+                <img src="recursos/imgs/DAF_FITO_M1A2_RIM_ilustra07.svg">
+                <p style="font-size: 8px; text-align: center;">Fonte: PEREIRA, A.M.S. <i>et al</i>; 2020.</p>
+            </div>
+        </div>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+
+        let conteudo = $('#conteudo').hide();
+        $('#hotWord-bt').css('cursor', 'pointer').hover(() => {
+            conteudo.fadeIn()
+        })
+        $('#hotWord-bt').mouseout(() => {
+            conteudo.fadeOut()
+        })
+    })
+</script> -->
+
+
+
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div>
+    <div style="display: flex;height: 320px;align-items: center;justify-content: space-around;">
+
+        <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+            <img id="botao_1" class="animate__animated animate__backInLeft"
+                src="recursos/imgs/DAF_FITO_M1A2_RIM_ilustra09a.svg " style="width: 300px;">
+        </div>
+
+        <div style="width: 421px;">
+            <p>Ao prescrever uma droga vegetal rasurada, recomenda-se que o profissional, sempre que possível, apresente
+                ao paciente ou ao cuidador uma imagem da parte da planta utilizada. Para isso, é aconselhável utilizar
+                fontes confiáveis, como os sites botânicos: Flora e Funga do Brasil
+                (<a href="https://reflora.jbrj.gov.br/reflora/listaBrasil/ConsultaPublicaUC/ConsultaPublicaUC.do#CondicaoTaxonCP"
+                    target="_blank">https://reflora.jbrj.gov.br/reflora/<br>listaBrasil/ConsultaPublicaUC/ConsultaPublicaUC.do#CondicaoTaxonCP</a>),
+                Tropicos (<a href="http://www.tropicos.org/" target="_blank">http://www.tropicos.org/</a>),
+                International Plant Names Index (<a href="http://www.ipni.org/"
+                    target="_blank">http://www.ipni.org/</a>), World Flora
+                Online (<a href="http://www.worldfloraonline.org/" target="_blank">http://www.worldfloraonline.org/</a>)
+                ou Plants of the World Online (<a href="https://powo.science.kew.org"
+                    target="_blank">https://powo.science.kew.org</a>).
+            </p>
+            <p>O profissional também pode orientar o paciente a adquirir a droga vegetal em farmácias que trabalham com
+                fitoterápicos, evitando a compra em supermercados, mercados municipais ou lojas de produtos naturais.
+                Outra alternativa é o fornecimento de uma muda certificada, permitindo que o próprio paciente cultive
+                sua planta medicinal, desde que a utilização da planta fresca seja viável.</p>
+            <p><b>Clique</b> na imagem e veja um exemplo.</p>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0; ">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1"
+    style="position: absolute;background-color: rgb(237, 235, 211);top: 2px;left: 30px;width: 750px;border-radius: 16px;padding: 26px 42px;">
+    <div>
+        <p>Por exemplo, a foto da folha de <i>Monteverdia ilicifolia</i> (espinheira-santa) pode ser apresentada ao
+            paciente
+            para que possa certificar-se de estar utilizando a espécie correta e a parte correta da planta medicinal.
+            Espécies incorretamente utilizadas podem resultar em ineficácia (p. ex. <em>Sorocea bonplandii</em>) ou
+            toxicidade (p. ex. <i>Ilex aquifolium</i>).</p>
+        <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+            <p><b style="font-size: 10px;">Folhas frescas da <i>Monteverdia ilicifolia</i> (Mart. ex Reissek) Biral.</b>
+            </p>
+            <img src="recursos/imgs/DAF_FITO_M1A2_RIM_ilustra09a.svg " style="width: 170px;">
+            <p style="font-size: 8px;">Fonte: Flora e Funga do Brasil. <i>Monteverdia ilicifolia</i> (Mart. ex
+                <i>Reissek</i>) Biral (Biral, s.d.).
+            </p>
+        </div>
+        <p>Nas monografias de plantas medicinais apresentadas neste curso, muitas vezes você irá encontrar a fotografia
+            da droga vegetal <i>in natura</i> e seca rasurada, triturada ou pulverizada e o aspecto do infuso ou
+            decocto, como na de preparo do infuso de <i>Monteverdia ilicifolia (Maytenus ilicifolia)</i>.</p>
+        <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+            <img src="recursos/imgs/DAF_FITO_M1A2_RIM_ilustra09c.jpeg" style="width: 430px;">
+            <p style="font-size: 8px;">Fonte: Pereira <i>et al</i>., 2020.
+            </p>
+        </div>
+    </div>
+    <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg" style="position: absolute;top: 9px;right: 7px;width: 20px;">
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

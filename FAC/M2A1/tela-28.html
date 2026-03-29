@@ -1,0 +1,88 @@
+<style>
+    li {
+        /* font-weight: bold; */
+        margin-top: 5px;
+    }
+</style>
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div>
+    <div style="display: flex;align-items: center;height: 320px;justify-content: space-evenly;">
+        <div style="width: 470px;">
+            <p>Vários são os fatores envolvidos nesse processo, entre os quais se destacam a obesidade, profissões
+                que
+                exigem longa permanência na posição de pé, histórico de trombose venosa profunda, uso de
+                anticoncepcionais, esportes que exigem impulsão e a gravidez. Os principais sintomas relacionados a
+                essa
+                condição são:</p>
+            <ul>
+                <li><b>Dor e sensação de peso nas pernas</b></li>
+                <li><b>Edema ausente ou leve pela manhã e que piora durante o dia</b></li>
+                <li><b>Sensação de formigamento nas pernas</b></li>
+                <li><b>Hiperpigmentação da pele</b></li>
+                <li><b>Dermatite com aspecto ressecado</b></li>
+                <li><b>Formação de eczema ou úlceras nas pernas</b></li>
+            </ul>
+            <div id="botao_1"
+                style="background-color: rgb(237, 235, 211); border-radius: 45px; display: flex; align-items: center; justify-content: center; padding: 0px 100px 0px 20px; margin-top: 30px; opacity: 1; border: 5px solid rgb(237, 235, 211); width: 290px; cursor: pointer;">
+                <p><b>Clique</b> na prancheta e veja os tipos de tratamentos.</p>
+                <img src="recursos/icones/DAF_FITO_M1A1_RIM_prancheta.svg"
+                    style="width: 70px;position: absolute;left: 340px;">
+            </div>
+        </div>
+        <div class="animate__animated animate__backInRight">
+            <img src="recursos/imgs/DAF_FITO_M2A1_RIM_ilustra19.svg" style="width: 340px;">
+        </div>
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan" style="cursor: pointer; display: none;">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 30px;display: flex;flex-direction: column;justify-content: center;width: 510px;align-items: center;">
+        <div>
+            <p><b>Tratamento </b></p>
+            <p>O repouso e a elevação dos membros inferiores e o uso de meias elásticas de suave e média compressão
+                melhoram
+                os sinais e sintomas, pois ajudam no retorno venoso. O tratamento habitual inclui ainda
+                escleroterapia,
+                exercícios físicos e medicamentos flebotônicos/venotônicos, convencionais ou fitoterápicos. A
+                cirurgia
+                das
+                varizes pode ser uma opção. </p>
+            <p><b>Tratamento fitoterápico</b></p>
+            <p>Exemplos de plantas medicinais indicadas para insuficiência venosa crônica:</p>
+            <ul>
+                <li><i>Centella asiatica (Apiaceae)</i> (centelha)</li>
+                <li><i>Aesculus hippocastanum (Sapindaceae)</i> (castanha-da-índia)</li>
+                <li><i>Vitis vinifera (Vitaceae)</i> (parreira ou videira)</li>
+            </ul>
+        </div>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').click(apagarJanelas);
+        let check = $(document).find('[id^=check]').hide();
+        apagarJanelas();
+
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+                $(check[index]).fadeIn();
+                $(botao).css({ 'opacity': '1', 'border': '5px solid #edebd3' });
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

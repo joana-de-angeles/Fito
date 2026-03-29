@@ -1,0 +1,76 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div class="coluna-esquerda largura-1_1"
+    style="display: flex;justify-content: center;align-items: center; height: 320px;flex-direction: column;">
+    <div style="display: flex;height: 380px;align-items: center;justify-content: space-around;flex-direction: column;">
+        <div style="display: flex;align-items: center;width: 800px;justify-content: space-around;">
+            <div class="animate__animated animate__backInLeft">
+                <img src="recursos/imgs/DAF_FITO_M2A2_RIM_ilustra23.svg" style="width: 320px;">
+            </div>
+            <div style="width: 390px;">
+                <p>Os sintomas da doença são geralmente silenciosos nas fases iniciais, mas podem incluir fadiga,
+                    desconforto abdominal e perda de peso não intencional em casos mais avançados. O diagnóstico
+                    muitas
+                    vezes começa com exames de sangue que avaliam a função hepática e pode envolver métodos de
+                    imagem,
+                    como ultrassonografia, ressonância magnética ou tomografia computadorizada, para confirmar a
+                    presença de gordura no fígado.</p>
+                <div id="botao_1"
+                    style="display: flex; align-items: center; position: relative; justify-content: center; margin-top: 60px; cursor: pointer;">
+                    <img src="recursos/icones/DAF_FITO_M1A1_RIM_prancheta.svg"
+                        style="width: 63px; position: absolute; right: 40px; cursor: pointer;">
+                    <div
+                        style="background: #EDEBD3 0% 0% no-repeat padding-box;border-radius: 24px;padding: 7px 20px;width: 301px;">
+                        <p style="font-size: 10px;"><b>Clique</b> na prancheta e veja os tipos de tratamentos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan" style="cursor: pointer; display: none;">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 30px;display: flex;flex-direction: column;justify-content: center;width: 530px;align-items: center;">
+        <div>
+            <p><b>Tratamento</b></p>
+            <p>O tratamento envolve principalmente a adoção de mudanças no estilo de vida, incluindo a perda de peso
+                gradual, dieta balanceada, aumento da atividade física e controle de condições associadas, como diabetes
+                e dislipidemia. Em todos os casos é recomendável interromper qualquer uso de álcool. Em casos mais
+                avançados ou quando a esteatose hepática evolui para esteato-hepatite não alcoólica (NASH), com
+                inflamação e fibrose, outras intervenções podem ser consideradas.</p>
+            <p><b>Tratamento fitoterápico</b></p>
+            <p>Algumas plantas medicinais podem ser utilizadas nesses quadros, em função de suas atividades coleréticas,
+                colagogas, anti-inflamatórias e hepatoprotetoras.</p>
+            <ul>
+                <li><i>Silybum marianum</i> (Asteraceae) (cardo mariano).</li>
+                <li><i>Cynara scolymus</i> (Asteraceae) (alcachofra).</li>
+                <li><i>Taraxacum officinale</i> (Asteraceae) (dente-de-leão).</li>
+                <li><i>Eclipta prostrata</i> (Asteraceae) (erva-botão).</li>
+            </ul>
+        </div>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

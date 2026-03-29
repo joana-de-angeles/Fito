@@ -1,0 +1,79 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div class="coluna-esquerda largura-1_1"
+    style="display: flex;justify-content: center;align-items: center; height: 320px;flex-direction: column;">
+    <div style="display: flex;height: 380px;align-items: center;justify-content: space-around;flex-direction: column;">
+        <div style="display: flex;align-items: center;width: 800px;justify-content: space-around;">
+            <div class="animate__animated animate__backInLeft">
+                <img src="recursos/imgs/DAF_FITO_M2A2_RIM_ilustra18.svg" style="width: 245px;">
+            </div>
+            <div style="width: 390px;">
+                <p>Exames laboratoriais e de imagem podem ser realizados para excluir outras condições que possam
+                    apresentar sintomas semelhantes.</p>
+                <div id="botao_1"
+                    style="display: flex;align-items: center;position: relative;justify-content: center;margin-top: 60px;">
+                    <img src="recursos/icones/DAF_FITO_M1A1_RIM_prancheta.svg"
+                        style="width: 63px; position: absolute; right: 50px;">
+                    <div
+                        style="background: #EDEBD3 0% 0% no-repeat padding-box;border-radius: 24px;padding: 7px 20px;width: 301px;">
+                        <p style="font-size: 10px;"><b>Clique</b> na prancheta e veja os tipos de tratamentos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan" style="cursor: pointer; display: none;">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 30px;display: flex;flex-direction: column;justify-content: center;width: 530px;align-items: center;">
+        <div style="width: 510px;">
+            <p><b>Tratamento</b></p>
+            <p>A abordagem de tratamento para a SII é multifacetada e inclui modificações na dieta, como a
+                redução do consumo de alimentos que podem desencadear os sintomas, manejo do estresse,
+                modificações no estilo de vida, aumento da ingestão hídrica (35 mL por quilo de peso, no
+                adulto), uma dieta rica em fibras (20-30 gramas de fontes alimentares integrais ao dia),
+                psicoterapia e, em alguns casos, medicamentos para aliviar os sintomas, como analgésicos e
+                medicamentos antiespasmódicos. O manejo da SII é muitas vezes personalizado, considerando a
+                gravidade dos sintomas e as necessidades individuais do paciente. A qualidade de vida dos
+                indivíduos com SII pode ser significativamente impactada, e o apoio contínuo de
+                profissionais de saúde é fundamental para ajudar os pacientes a gerenciar efetivamente os
+                sintomas e melhorar o bem-estar geral.
+            </p>
+            <p><b>Tratamento fitoterápico </b></p>
+            <p>Algumas plantas medicinais podem ser utilizadas no tratamento da SII. Na forma diarreica, são
+                usadas plantas antidiarreicas, e na forma constipada, as plantas carminativas e
+                anticonstipantes, devido a sua atividade anti-inflamatória e imunomoduladora.
+            </p>
+            <p>Exemplos de plantas medicinais indicadas na síndrome do intestino irritável:</p>
+            <ul>
+                <li><i>Cinnamomum verum</i> (Lauraceae) (canela).</li>
+                <li><i>Foeniculum vulgare</i> (Apiaceae) (funcho).</li>
+                <li><i>Tamarindus indica</i> (Fabaceae) (tamarindo).</li>
+            </ul>
+        </div>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

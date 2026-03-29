@@ -1,0 +1,45 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div class="coluna-esquerda largura-1_1"
+    style="display: flex;justify-content: center;align-items: center; height: 320px;flex-direction: column;">
+    <div style="width: 83%;">
+        <h1>Droga vegetal triturada ou pulverizada</h1>
+        <p>
+            A droga vegetal é triturada ou pulverizada com auxílio de moinhos para reduzir o <span
+                style="background-color: #BCAA8A;"><a style="color: black; cursor: pointer;" id="hotWord-bt">tamanho das
+                    partículas</a></span> até
+            chegar ao ponto de pó. <b>Observe</b> a tabela.
+        </p>
+        <p style="font-weight: bold;text-align: center;margin-top: 20px;margin-bottom: 10px;">
+            Grau de divisão, tamanho de partícula e do orifício do Tamis.</p>
+        <div style="display: flex;align-items: center;justify-content: space-around;">
+            <img class="animate__animated animate__backInLeft" src="recursos/imgs/DAF_FITO_M1A2_RIM_Tab02a.png"
+                style="width: 445px;">
+        </div>
+        <p style="font-size: 8px; text-align: center;">Fonte: Adaptado da Farmacopeia Brasileira, 7ª edição (BRASIL,
+            Anvisa, 2024).</p>
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="conteudo_1"
+    style="position: absolute;background-color: #BCAA8A;top: 160px;left: 480px;width: 250px;border-radius: 16px;padding: 16px 13px;">
+    <p style="font-size: 10px;">Tamanho das partículas: é o grau de divisão ou granulometria, que é expresso pela
+        referência à abertura nominal da malha do tamis utilizado. Os tamises empregados são de aço inoxidável ou latão,
+        não sendo permitido o revestimento dos fios (Brasil, Anvisa, 2024).</p>
+</div>
+
+<script>
+    $(() => {
+        let conteudo1 = $('#conteudo_1').hide();
+        $('#hotWord-bt').css('cursor', 'pointer').hover(() => {
+            conteudo1.fadeIn()
+        })
+        $('#hotWord-bt').mouseout(() => {
+            conteudo1.fadeOut()
+        })
+    })
+</script>

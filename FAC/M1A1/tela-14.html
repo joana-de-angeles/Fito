@@ -1,0 +1,64 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div style="display: flex;flex-direction: column;justify-content: center;align-items: center;margin-top: -46px;">
+    <div style="width: 90%;display: flex;flex-direction: column;">
+        <p>
+            O termo <b>Etnobotânica</b> (<em>Ethnobotany</em>) surgiu na literatura científica em 1896 e foi criado
+            por
+            John W. Harshberger. Contudo, a etnobotânica começou a se consolidar como uma disciplina científica
+            somente
+            a partir da década de 1950, quando foram publicados diversos estudos relevantes sobre o tema (Lucena
+            <em>et
+                al</em>., 2010; Oliveira <em>et al</em>., 2010). <b>Clique</b> no ícone para expandir alguns marcos
+            importantes nesse processo.
+        </p>
+        <div style="display: flex;flex-direction: column;gap: 20px;">
+            <img id="botao_1" src="recursos/icones/DAF_FITO_M1A1_RIM_ilustra_Check.svg" style="width: 70px; ">
+            <img id="botao_2" src="recursos/icones/DAF_FITO_M1A1_RIM_ilustra_Check.svg" style="width: 70px; ">
+            <img id="botao_3" src="recursos/icones/DAF_FITO_M1A1_RIM_ilustra_Check.svg" style="width: 70px; ">
+            <img id="botao_4" src="recursos/icones/DAF_FITO_M1A1_RIM_ilustra_Check.svg" style="width: 70px; ">
+        </div>
+    </div>
+    <div>
+        <div id="janela_1" style="position: absolute;top: 141px;left: 130px;width: 520px;">
+            <p>A publicação do livro "<b>Plants, Man and Life</b>" (1952), de Edgar Shannon Anderson, obra que aborda
+                antropologia, história e ecologia.</p>
+        </div>
+        <div id="janela_2" style="position: absolute;top: 226px;left: 130px;width: 700px;">
+            <p>A fundação da <strong>Society of Economic Botany (SEB)</strong> em 1959, a qual reúne pesquisadores
+                de
+                várias áreas interessados nos aspectos econômicos, culturais e ecológicos das plantas. </p>
+        </div>
+        <div id="janela_3" style="position: absolute;top: 307px;left: 130px;width: 700px;">
+            <p>A publicação do livro “<b>Plants of the Gods: Their Sacred, Healing, and Hallucinogenic Powers</b>”
+                (1979), de Richard Evans Schultes (e outro autor), que é considerado o “pai” da etnobotânica
+                moderna e realizou expedições na Amazônia para estudar as plantas usadas pelos povos indígenas.</p>
+        </div>
+        <div id="janela_4" style="position: absolute;top: 404px;left: 130px;width: 700px;">
+            <p>A criação do <strong>Journal of Ethnobiology</strong> em 1981, que é uma das principais publicações
+                científicas da área e abrange temas relacionados à etnobotânica e etnoecologia.</p>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]');//.css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                // apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

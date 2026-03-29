@@ -1,0 +1,104 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M4A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div class="coluna-esquerda largura-1_1"
+    style="display: flex;justify-content: center;align-items: center;height: 350px;flex-direction: column;">
+    <div style="width: 78%;">
+        <p>Os principais transtornos de ansiedade, de acordo com a CID-10 e a CID-11, estão listados no <b>Quadro
+                3</b>.
+        </p>
+        <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+            <p style="font-size: 10px;"><b>Quadro 3</b> - Classificação dos transtornos de ansiedade e relacionados
+                na
+                CID-11 e
+                seus equivalentes na
+                CID-10.</p>
+            <img src="recursos/imgs/Ilustra_tela_21.png" style="width: 470px;">
+            <div style="width: 440px;">
+                <p style="font-size: 10px;">Legenda: *Diagnósticos que estão presentes nesta classificação, porém se
+                    encontram em outro grupo.
+                    **Diagnósticos que , na CID-10, eram aplicáveis somente na infância e na adolescência. </p>
+                <p style="font-size: 10px;">Fonte: OMS, 1993; 2018.</p>
+            </div>
+        </div>
+        <div style="display: flex;justify-content: flex-end;align-items: center;">
+            <div id="botao_1"
+                style="background-color: rgb(237, 235, 211);border-radius: 45px;display: flex;align-items: center;justify-content: center;padding: 0px 20px;opacity: 1;border: 5px solid rgb(237, 235, 211);font-size: 10px;width: 280px;">
+                <p style="font-size: 10px;margin-left: -70px;"><b>Clique</b> na prancheta e veja os tipos de
+                    tratamentos.
+                </p>
+                <img src="recursos/icones/DAF_FITO_M1A1_RIM_prancheta.svg"
+                    style="width: 50px;position: absolute;right: 130px;">
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0; z-index: -100;">
+    <img src="recursos/imgs/DAF_FITO_M4A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan" style=" display: none;">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 30px;display: flex;flex-direction: column;justify-content: center;width: 710px;align-items: center;">
+        <div>
+            <p><b>Tratamento</b> </p>
+            <p>Os transtornos de ansiedade são condições complexas, multifacetadas, que envolvem fatores biológicos,
+                comportamentais e ambientais. Geralmente, tais condições são tratadas com medicamentos que atuam na
+                modulação do sistema monoaminérgico, serotoninérgico e GABAérgico. Os fitoterápicos podem ser úteis
+                em
+                condições sindrômicas relacionadas à ansiedade e não são específicos para um determinado transtorno.
+                Podem ser utilizados em monoterapia (quando o quadro é leve e transitório) ou em associação com
+                outros
+                medicamentos sintéticos (em quadros moderados e graves). Os fitoterápicos, como qualquer
+                medicamento,
+                têm um potencial de interação com outras substâncias. Desta forma, qualquer prescrição de
+                fitoterápico
+                em
+                associação com outras substâncias farmacológicas precisa ser avaliada quanto ao potencial de
+                interações
+                farmacocinéticas ou farmacodinâmicas problemáticas.</p>
+            <p><b>Tratamento fitoterápico</b> </p>
+            <p>Os principais mecanismos pelos quais os fitoterápicos exercem atividade ansiolítica incluem interação
+                com
+                o receptor GABA<sub>A</sub>, inibição da recaptação de serotonina e inibição da monoaminoxidase (MAO),
+                além da
+                atividade direta de substâncias presentes em óleos essenciais sobre o sistema nervoso central.
+                Algumas
+                plantas medicinais possuem algumas dessas atividades.</p>
+            <p>Exemplos de plantas medicinais indicadas nos transtornos de ansiedade. </p>
+            <div style="display: flex; align-items: center; justify-content: center;flex-direction: column;">
+                <p><b>Quadro 4</b>. Exemplos de plantas medicinais indicadas nos transtornos de ansiedade. </p>
+                <div style="background-color: #E1C99B; padding: 10px 10px;">
+                    <ul>
+                        <li><i>Passiflora incarnata</i> (Passifloraceae) (maracujá).</li>
+                        <li><i>Erythrina mulungu</i> (Fabaceae) (mulungu).</li>
+                        <li><i>Valeriana officinalis</i> (Caprifoliaceae) (valeriana).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').click(apagarJanelas);
+        let check = $(document).find('[id^=check]').hide();
+        apagarJanelas();
+
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+                $(check[index]).fadeIn();
+                $(botao).css({ 'opacity': '1', 'border': '5px solid #edebd3' });
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

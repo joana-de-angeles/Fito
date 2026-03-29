@@ -1,0 +1,93 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div class="coluna-esquerda largura-1_1"
+    style="display: flex;justify-content: center;align-items: center;height: 320px;flex-direction: column;">
+    <div style="width: 88%; z-index: 100;">
+        <p>Por definição de acordo com a <a
+                href="https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&tipo=RDC&numeroAto=00001004&seqAto=000&valorAno=2025&orgao=RDC/DC/ANVISA/MS&codTipo=&desItem=&desItemFim=&cod_menu=1696&cod_modulo=134&pesquisa=true"
+                target="_blank">RDC nº 1.004, de 17 de dezembro de 2025</a>, <b>os medicamentos tradicionais
+                fitoterápicos
+                (MTF)
+                são isentos de prescrição médica</b>:</p>
+
+        <p>“São considerados medicamentos tradicionais fitoterápicos aqueles obtidos exclusivamente a partir de
+            matérias-primas ativas vegetais com segurança e efetividade fundamentadas em dados técnico-científicos,
+            desenvolvidos para utilização sem necessidade de diagnóstico, prescrição e acompanhamento realizados por
+            médico e que sejam caracterizados pela constância de sua qualidade” (Brasil, 2025).</p>
+
+        <p>O Formulário de Fitoterápicos da Farmacopeia Brasileira contém, exclusivamente, produtos tradicionais
+            fitoterápicos, ora denominados medicamentos tradicionais fitoterápicos. Portanto, <b
+                style="text-decoration: underline;">todos são isentos de prescrição médica</b>, porque são indicados
+            para doenças e sintomas de baixa gravidade. É importante destacar que um dos principais critérios empregados
+            na classificação de um fitoterápico como isento ou não de prescrição médica é a <b>indicação
+                terapêutica</b>. Por exemplo, <i>Plantago ovata</i>, quando indicado como auxiliar no tratamento de
+            constipação intestinal e constipação ocasional, é isento de prescrição médica, mas, quando para tratamento
+            da síndrome do cólon irritável, exige prescrição médica.</p>
+
+        <!-- <p>Adicionalmente, a <a
+                href="https://www.gov.br/anvisa/pt-br/setorregulado/regularizacao/medicamentos/fitoterapicos-dinamizados-e-especificos/informes/fitoterapicos/in-04-2014.pdf"
+                target="_blank">IN nº 04, de 18 de junho de 2014</a>, traz a orientação para registro de Medicamento
+            Fitoterápico e registro e notificação de Produto Tradicional Fitoterápico, onde destaca-se:</p>
+
+        <p>“Assim, <b>não existe uma lista que aponte espécies vegetais que sejam de venda sob prescrição médica, a
+                restrição é definida de acordo com a indicação terapêutica dada ao medicamento</b>. Para as empresas que
+            utilizam o registro simplificado de MF, a restrição de venda do medicamento já foi padronizada na RDC nº
+            26/2014. Essa orientação aplica-se apenas a MF, já que os PTF são todos isentos de prescrição médica,
+            considerando que são indicados para alegações terapêuticas de baixa gravidade." (BRASIL, 2014).</p> -->
+        <div style="display: flex;gap: 40px;">
+            <p><b>Clique</b> no botão saiba mais para continuar aprendendo.</p>
+            <img id="botao_1" src="recursos/icones/DAF_FITO_M1A1_RIM_saiba_mais.svg" style="width: 70px;">
+        </div>
+    </div>
+
+</div>
+<footer style="padding: 0; ">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+    display: flex; justify-content: center; align-items: center; 
+    background-color: rgba(0,0,0,0.5); z-index: 9999;">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 40px;display: flex;flex-direction: column;justify-content: center;width: 780px;">
+        <div
+            style="background-color: #ddcaa0;border-radius: 30px;width: 734px;display: flex;align-items: center;justify-content: center;flex-direction: row;border-width: 9px;border-style: double;border-color: white;padding: 10px 20px;">
+            <div style="display: flex;align-items: center;width: 100%;justify-content: space-evenly;">
+                <img src="recursos/icones/DAF_FITO_M1A1_RIM_saiba_mais.svg" style="width: 92px;margin-right: 28px;">
+                <div>
+
+                    <p style="color: #3B3D35;">
+                        Você pode encontrar mais informações no Guia de prescrição pelos nutricionistas e dispensação
+                        pelos farmacêuticos de suplementos alimentares e fitoterápicos, elaborado em conjunto pelos
+                        Conselhos Federais de
+                        Nutrição e de Farmácia, disponível em:
+                        <a href="https://www.cfn.org.br/wp-content/uploads/2023/08/GUIA_CFN_04-PICS.pdf"
+                            target="_blank">https://www.cfn.org.br/wp-content/uploads/2023/08/GUIA_CFN_04-PICS.pdf</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img id="close" src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]')//.css('cursor', 'pointer');//.click(apagarJanelas);
+        $(document).find('[id^=close]').css('cursor', 'pointer').click(apagarJanelas);
+        apagarJanelas();
+
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

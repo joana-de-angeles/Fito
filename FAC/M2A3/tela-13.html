@@ -1,0 +1,94 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div class="coluna-esquerda largura-1_1"
+    style="display: flex;justify-content: center;align-items: center;height: 330px;flex-direction: column;width: 90%;">
+    <div style="width: 79%;display: flex;align-items: center;flex-direction: column;">
+        <div>
+            <h1>SÍNDROME METABÓLICA</h1>
+            <p>A síndrome metabólica é caracterizada por um conjunto de fatores de risco cardiovascular usualmente
+                relacionado à deposição central de gordura e à resistência à insulina. É comumente associada à
+                obesidade,
+                DM2, dislipidemia e hipertensão arterial.</p>
+            <p><b>Clique</b> nas imagens e conheça a etiologia e o diagnóstico da síndrome metabólica.</p>
+        </div>
+        <div style="display: flex;gap: 70px;">
+            <div id="botao_1"
+                style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; cursor: pointer;">
+                <img src="recursos/imgs/DAF_FITO_M2A3_RIM_ilustra09.svg" style="width: 230px;">
+                <div
+                    style="background-color: #EDEBD3;width: 100px;height: 50px;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                    <p style="text-align: center;">Etiologia</p>
+                </div>
+            </div>
+            <div id="botao_2"
+                style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; cursor: pointer;">
+                <img src="recursos/imgs/DAF_FITO_M2A3_RIM_ilustra10.svg" style="width: 240px;">
+                <div
+                    style="background-color: #EDEBD3;width: 100px;height: 50px;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                    <p style="text-align: center;">Diagnóstico</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan" style="cursor: pointer; display: none;">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 30px;display: flex;flex-direction: column;justify-content: center;width: 530px;align-items: center;">
+        <div>
+            <p><b>Etiologia </b></p>
+            <p>As causas da síndrome metabólica podem envolver predisposição genética, sedentarismo, resistência à
+                insulina, disfunção endotelial, ativação crônica do sistema imune inato e uso de hormônios.</p>
+        </div>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<div id="janela_2" class="jan" style="cursor: pointer; display: none;">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 30px;display: flex;flex-direction: column;justify-content: center;width: 640px;align-items: center;">
+        <div>
+            <p><b>Diagnóstico </b></p>
+            <p>O diagnóstico da síndrome metabólica deve ser feito a partir de critérios clínicos e laboratoriais,
+                sendo
+                obrigatório o critério de aumento da circunferência abdominal, conforme a tabela a seguir.</p>
+            <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                <p><b>Tabela 4</b>. Critérios diagnósticos de síndrome metabólica em homens e mulheres, incluindo
+                    pontos
+                    de corte da circunferência abdominal como critério obrigatório.</p>
+                <img src="recursos/imgs/DAF_FITO_M2A3__RIM_Tab09.svg" style="width: 80%;">
+                <p>Legenda: TG, triglicérides; HDL, colesterol HDL (<i>high-density lipoprotein</i>); PAs, pressão
+                    arterial sistólica; PAd, pressão arterial diastólica; GJ, glicemia de jejum.
+                    * O teste de tolerância à glicose é recomendado quando GJ &gt; 99 mg/dL mas não é obrigatório
+                    para o
+                    diagnóstico de síndrome metabólica.
+                    Fonte: Diretrizes Brasileiras de Obesidade (2016).
+                </p>
+            </div>
+        </div>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').click(apagarJanelas);
+        apagarJanelas();
+
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

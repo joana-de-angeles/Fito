@@ -1,0 +1,49 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div>
+    <div style="display: flex;align-items: center;height: 320px;justify-content: space-around;">
+        <div style="width: 460px;">
+            <h1 style="width: 433px;">INTRODUÇÃO</h1>
+            <p style="margin-top: 20px;">
+                O Brasil possui uma expressiva fração da diversidade mundial de plantas, situando-se entre os países
+                mais ricos em <span style="background-color: #BCAA8A;"><a style="color: black;"
+                        id="hotWord-bt">biodiversidade</a></span> e entre aqueles com altas taxas de endemismo. De
+                acordo com dados do projeto Flora e Funga do Brasil (<a href="https://floradobrasil.jbrj.gov.br/"
+                    target="_blank">https://floradobrasil.jbrj.gov.br/</a>), são atualmente
+                reconhecidas 53.680 espécies (nativas, naturalizadas e cultivadas), sendo 5.047 de Algas, 1.626 de
+                Briófitas, 1.425 de Samambaias e Licófitas, 129 de Gimnospermas, 37.059 de Angiospermas e 8.394 de
+                Fungos (consulta realizada em dezembro/2025) (JBRJ, 2025).
+            </p>
+        </div>
+        <div class="animate__animated animate__backInRight">
+            <img src="recursos/imgs/DAF_FITO_M1A1_RIM_ilustra01.svg " style="width: 278px;margin-right: -2px;">
+        </div>
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="conteudo"
+    style="position: absolute;background-color: #BCAA8A;top: 266px;right: 370px;width: 475px;border-radius: 16px;padding: 16px 13px;">
+    <p style="font-size: 10px;"><b>Biodiversidade</b>: diz respeito à diversidade (variedade) de espécies
+        existentes em uma determinada área; diversidade genética refere-se a diferentes populações dentro da mesma
+        espécie; diversidade ecológica diz respeito ao ecossistema, ou seja, cada ecossistema abriga uma combinação
+        característica de plantas e animais que os caracterizam. Logo, a biodiversidade corresponde à quantidade de
+        diferentes categorias biológicas (riqueza) presentes na terra e à abundância relativa destas categorias,
+        incluindo variabilidade ao nível local, complementaridade biológica entre habitats e variabilidade entre
+        paisagens (Brasil, MMA, s.d.).
+    </p>
+</div>
+<script>
+    $(() => {
+        let conteudo = $('#conteudo').hide();
+        $('#hotWord-bt').css('cursor', 'pointer').hover(() => {
+            conteudo.fadeIn()
+        })
+        $('#hotWord-bt').mouseout(() => {
+            conteudo.fadeOut()
+        })
+    })
+</script>

@@ -1,0 +1,87 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div class="coluna-esquerda largura-1_1"
+    style="display: flex;justify-content: center;align-items: center; height: 320px;flex-direction: column;">
+    <div style="width: 62%;">
+        <p>A <b>biotransformação</b> ou <b>metabolização</b> acontece principalmente no fígado, implicado em mais de 13.000 reações. Sua
+            principal
+            função é a de desintoxicação ou neutralização de produtos tóxicos do meio ou gerados pelo próprio
+            organismo.
+            Também conhecida como desintoxicação hepática, nesta etapa ocorrem dois processos enzimáticos: a <b>fase
+                I</b> e a
+            <b>fase II</b>.
+        </p>
+        <p>Observe a imagem e <b>clique</b> em cada uma das fases.</p>
+        <br>
+        <div style="display: flex;align-items: center;justify-content: space-around;flex-direction: column;">
+            <p style="font-size: 10px; text-align: center; font-weight: bold;">Processos enzimáticos hepáticos de
+                fase I
+                e fase II.</p>
+            <img class="animate__animated animate__backInLeft" src="recursos/imgs/DAF_FITO_M1A3_RIM_Info02.svg"
+                style="width: 90%;">
+        </div>
+        <div>
+            <div id="botao_1" style="width: 90px;height: 50px;position: absolute;top: 320px;left: 417px;">
+            </div>
+            <div id="botao_2" style="width: 90px;height: 50px;position: absolute;top: 320px;left: 617px;">
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 40px;display: flex;flex-direction: column;justify-content: center;width: 440px;align-items: center;">
+        <p><b>Fase I - Oxidação, hidrólise e redução (enzimático)</b>
+            <br>
+            <br> As enzimas metabolizadoras pertencem à família do citocromo P450. Essas enzimas são importantes
+            para
+            transformar os produtos tóxicos em formas intermediárias e mais biodisponíveis para a fase II.
+        </p>
+        <img src="recursos/imgs/DAF_FITO_M1A3_RIM_Info03.svg" style="width: 80%;">
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<div id="janela_2" class="jan">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 40px;display: flex;flex-direction: column;justify-content: center;width: 440px;">
+        <p><b>Fase II - Conjugação com metabólitos orgânicos (não enzimático)</b>
+            <br>
+            <br> Nesta fase, um composto químico altamente hidrossolúvel se liga ao medicamento já oxidado na fase
+            anterior, facilitando sua excreção pelo aumento de sua solubilidade. As enzimas e os compostos químicos
+            hidrofílicos correspondentes mais comuns são:
+        </p>
+        <ul>
+            <li><b>Sulfotransferase</b>: adiciona sulfato;</li>
+            <li><b>UDP-glicuronosiltransferase</b>: adiciona ácido glicurônico;</li>
+            <li><b>Glutationa S-transferase</b>: adiciona glutationa;</li>
+            <li><b>N-acetiltransferase</b>: adiciona grupo acetila;</li>
+            <li><b>Metiltransferase</b>: adiciona grupo metila.</li>
+        </ul>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').click(apagarJanelas);
+        apagarJanelas();
+
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

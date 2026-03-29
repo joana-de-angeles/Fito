@@ -1,0 +1,133 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div class="coluna-esquerda largura-1_1" style="display: flex;justify-content: center;">
+    <div style="width: 42%;">
+        <p><b>Arraste</b> cada um dos medicamentos para boca do paciente e veja como age o fármaco na corrente
+            sanguínea.</p>
+        <div style="display: flex;align-items: center;justify-content: space-around;">
+            <img id="drop_1" style="position: absolute;top: 164px;left: 280px;width: 180px;"
+                src="recursos/imgs/DAF_FITO_M1A3_RIM_ilustra07_corpo.svg">
+        </div>
+    </div>
+    <div>
+        <div id="drag_1" style="position: absolute;left: 530px;top: 200px;">
+            <img src="recursos/imgs/DAF_FITO_M1A3_RIM_ilustra07_Pill01.svg" style="width: 275px;">
+        </div>
+        <div id="drag_2" draggable="true" style="position: absolute;left: 530px;top: 280px;">
+            <img src="recursos/imgs/DAF_FITO_M1A3_RIM_ilustra07_Pill02.svg" style="width: 275px;">
+        </div>
+        <div id="drag_3" draggable="true" style="position: absolute;left: 530px;top: 360px;">
+            <img src="recursos/imgs/DAF_FITO_M1A3_RIM_ilustra07_Pill03.svg" style="width: 275px;">
+        </div>
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211); border-radius: 16px; padding: 50px;display: flex;flex-direction: column;justify-content: center;width: 430px;align-items: center;">
+        <p>Uma vez na corrente sanguínea, o fármaco fica ligado às <b>proteínas plasmáticas</b>. Quando ligado à
+            proteína o
+            fármaco não tem como ligar-se ao sítio de ação. Assim, sua porção ativa será apenas a fração livre e não a
+            ligada às proteínas. Essa ligação retarda o processo de biotransformação e de excreção, o que faz com que
+            o
+            ativo se mantenha mais tempo no organismo. Por outro lado, alguns fármacos se ligam fortemente (≈ 90%) a
+            proteínas plasmáticas, tais como anticoagulantes orais, fenitoína, estrógeno, glicocorticoides, diazepam,
+            AINEs
+            e outros.</p>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<div id="janela_2" class="jan">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211); border-radius: 16px; padding: 50px;display: flex;flex-direction: column;justify-content: center;width: 430px;align-items: center;">
+        <p>A competição entre dois fármacos pela ligação às proteínas plasmáticas resulta em um aumento da fração livre
+            de
+            um ou ambos os fármacos. Como resultado, pode haver intensificação da resposta farmacológica e/ou tóxica.
+            Uma
+            proteína plasmática muito importante nesse processo é a albumina e, por isso, seu excesso ou redução induz
+            aumento ou redução da fração livre do medicamento e, por conseguinte, pode elevar ou reduzir a toxicidade do
+            ativo.</p>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<div id="janela_1" class="jan">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211); border-radius: 16px; padding: 50px;display: flex;flex-direction: column;justify-content: center;width: 430px;align-items: center;">
+        <p>Um exemplo disso ocorre com o tamoxifeno, um modulador seletivo de receptores de estrogênio. Na presença de
+            curcumina, a afinidade de ligação do tamoxifeno à albumina sérica humana se reduz, aumentando o efeito do
+            fármaco, incluindo a toxicidade. Outro exemplo inclui a elevada afinidade de flavonoides pela albumina
+            sérica,
+            aumentando a fração livre de fármacos com menor afinidade pela albumina e, consequentemente, o efeito ou a
+            toxicidade.</p>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<script>
+    $(() => {
+        const vazios = $(document).find('[id^=drop]');
+        let drag;
+        let positions = [];
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelasDragDrop);
+        apagarJanelasDragDrop();
+
+        function apagarJanelasDragDrop() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+
+        const dragStart = function () {
+            this.className += " hold";
+            drag = this;
+            setTimeout(() => (this.className = "invisible"), 0);
+            apagarJanelasDragDrop();
+        };
+
+        const dragOver = function (e) {
+            e.preventDefault();
+        };
+
+        const dragEnter = function (e) {
+            e.preventDefault();
+            this.className += " hovered";
+        };
+
+        const dragLeave = function () {
+            this.className = "empty";
+        };
+
+        const dragEnd = function () {
+            this.className = "drag";
+        };
+
+        const dragDrop = function () {
+            this.className = "empty";
+            if (this.id.indexOf('drop') == 0) {
+                console.log(drag.id.split('_')[1]);
+                $("#" + drag.id).hide();
+                $(janelas[(drag.id.split('_')[1] - 1)]).fadeIn();
+            }
+        };
+
+        $(document).find('[id^=drag]').map((index, objeto) => {
+            $(objeto).css('cursor', 'pointer');
+            objeto.addEventListener("dragstart", dragStart);
+            objeto.addEventListener("dragend", dragEnd);
+            positions[index] = { top: objeto.offsetTop, left: objeto.offsetLeft }
+        })
+
+        vazios.map((a, b) => {
+            b.addEventListener("dragover", dragOver);
+            b.addEventListener("dragenter", dragEnter);
+            b.addEventListener("dragleave", dragLeave);
+            b.addEventListener("drop", dragDrop);
+        })
+    })
+</script>

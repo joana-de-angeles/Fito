@@ -1,0 +1,66 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div>
+    <div style="display: flex;align-items: center;height: 330px;justify-content: space-evenly;">
+        <div style="width: 386px;">
+            <h1>ALINHAR AS EXPECTATIVAS E ESTABELECER METAS</h1>
+            <p style="font-size: 10px;"><i>Forest plot</i> de revisões sistemáticas e meta-análises de fitoterápicos e
+                fitofármacos para perda de peso.</p>
+            <div class="animate__animated animate__backInLeft"
+                style="display: flex;align-items: center;flex-direction: column;justify-content: center;">
+                <img id="botao_1" src="recursos/imgs/DAF_FITO_M2A3__RIM_Tab10.png" style="width: 65%; cursor: pointer;">
+            </div>
+            <p style="font-size: 10px;">Legenda: CHM, medicina tradicional chinesa; * como um ingrediente de produto
+                composto. Os valores estão expressos em média e intervalo de confiança de 95%. Se as barras tocam ou
+                atravessam a linha pontilhada, significa que o efeito não é estatisticamente significativo. Os
+                resultados aqui apresentados não foram uma meta-análise pois não consideraram o tamanho amostral de
+                cada
+                estudo. Fonte: Elaborado pelos autores a partir da literatura.</p>
+        </div>
+        <div style="width: 400px;">
+            <p>Sempre que vamos tratar um paciente com uma doença metabólica, independentemente de se utilizarem
+                fitoterápicos ou não, um dos principais elementos iniciais é o alinhamento das expectativas do
+                paciente
+                e do profissional de saúde quanto ao tratamento. Um paciente pode trazer expectativas irreais a
+                respeito
+                do efeito esperado com o tratamento. Ao mesmo tempo, um profissional menos experiente pode se
+                decepcionar com um efeito não tão intenso quanto ao que esperava.</p>
+            <p>No caso da obesidade, o efeito médio dos fitoterápicos na redução de peso é de apenas –1,14 kg
+                (variando de –2,25 a –0,04 kg). <br><br>
+                <b>Clique</b> na imagem para ampliá-la.
+            </p>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0; ">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan" style="cursor: pointer; display: none;">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 90px;display: flex;flex-direction: column;justify-content: center;width: 540px;align-items: center;">
+        <img src="recursos/imgs/DAF_FITO_M2A3__RIM_Tab10.png" style="width: 107%;">
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').click(apagarJanelas);
+        apagarJanelas();
+
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

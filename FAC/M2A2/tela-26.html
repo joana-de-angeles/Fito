@@ -1,0 +1,80 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+  z-index: -1;">
+</div>
+<div class="animate__animated animate__backInLeft"
+    style="display: flex;justify-content: center;margin-top: -30px;align-items: center;flex-direction: column;height: 393px;">
+    <div
+        style="background-color: #ddcaa0;border-radius: 30px;width: 761px;display: flex;align-items: center;justify-content: center;flex-direction: row;border-width: 9px;border-style: double;border-color: white;padding: 20px 20px;">
+        <div style="display: flex;align-items: center;width: 96%;justify-content: space-evenly;">
+            <img src="recursos/icones/DAF_FITO_M1A1_RIM_importante.svg" style="width: 91px;margin-right: 28px;">
+            <p>O diagnóstico da disbiose intestinal pode ser desafiador, pois não existe um teste único e definitivo
+                para essa condição. O diagnóstico deve ser baseado na história clínica e em exames complementares
+                laboratoriais, funcionais ou de imagem. Exames de coprologia funcional ou de microbioma intestinal
+                podem
+                ajudar a definir melhor a intervenção. O exame de coprologia funcional faz uma análise de má
+                absorção.
+                Já o exame de microbioma intestinal analisa o tipo, a quantidade e a qualidade da colonização
+                intestinal. O diagnóstico definitivo pode ser feito com uma biópsia intestinal, com a desvantagem de
+                ser
+                invasivo. Infelizmente, estes exames não estão disponíveis na rede pública.</p>
+        </div>
+    </div>
+    <div id="botao_1"
+        style="display: flex;align-items: center;position: relative;justify-content: center;margin-top: 40px;">
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_prancheta.svg"
+            style="width: 63px;position: absolute;right: 22px;cursor: pointer;">
+        <div
+            style="background: #EDEBD3 0% 0% no-repeat padding-box;border-radius: 24px;padding: 7px 20px;width: 301px;">
+            <p style="font-size: 10px;"><b>Clique</b> na prancheta e veja os tipos de tratamentos.</p>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0; ">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan" style="cursor: pointer; display: none;">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 30px;display: flex;flex-direction: column;justify-content: center;width: 510px;align-items: center;">
+        <div>
+            <p><b>Tratamento</b></p>
+            <p>O tratamento da disbiose intestinal inclui: reeducação alimentar; exclusão de alimentos fermentativos
+                (açúcar e doces) e de alimentos industrializados, dando preferência aos alimentos <i>in natura</i>;
+                inclusão de
+                todos os grupos alimentares, de fontes naturais de probióticos, como os lactobacilos, ou na forma de
+                suplementos e de fibras; utilização de grãos e produtos integrais.</p>
+            <p><b>Tratamento fitoterápico</b></p>
+            <p>Algumas plantas medicinais podem ser utilizadas no tratamento da disbiose intestinal devido à sua
+                atividade depurativa e imunomoduladora. Veja alguns exemplos de plantas medicinais indicadas na disbiose
+                intestinal:</p>
+            <ul>
+                <li><i>Taraxacum officinale (Asteraceae)</i> (dente-de-leão).</li>
+                <li><i>Curcuma longa (Zingiberaceae)</i> (açafrão-da-terra).</li>
+                <li><i>Linum usitatissimum (Linaceae)</i> (linhaça).</li>
+            </ul>
+        </div>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').click(apagarJanelas);
+        // let check = $(document).find('[id^=check]').hide();
+        apagarJanelas();
+
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+                // $(check[index]).fadeIn();
+                // $(botao).css({ 'opacity': '1', 'border': '5px solid #edebd3' });
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

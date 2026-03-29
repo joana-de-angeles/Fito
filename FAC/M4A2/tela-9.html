@@ -1,0 +1,58 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M4A2_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div>
+    <div style="display: flex;align-items: center;height: 360px;justify-content: space-around;">
+        <div class="animate__animated animate__backInLeft"
+            style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+            <p>Anatomia do sistema urinário feminino.</p>
+            <img id="botao_1" src="recursos/imgs/DAF_FITO_M4A2_RIM_ilustra04.svg " style="width: 330px; ">
+            <p>Fonte: Drake, R.L. <i>et al</i>., 2005.</p>
+        </div>
+        <div style="width: 337px;">
+            <h1>SISTEMA URINÁRIO</h1>
+            <p>O sistema urinário é formado por um conjunto de estruturas: rins, ureteres, bexiga e uretra. Os rins
+                se
+                localizam na região retroperitoneal, na região da primeira à quarta vértebra lombar, e são
+                recobertos,
+                cada um por uma cápsula renal. Em suas partes superiores, localizam-se as glândulas suprarrenais (ou
+                adrenais). Sua morfologia interna mostra que é composto, em sua parte mais externa, do córtex renal
+                e,
+                mais internamente, da medula renal.</p>
+            <p><b>Clique</b> na imagem para amplia-la.</p>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0; ">
+    <img src="recursos/imgs/DAF_FITO_M4A2_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 30px;display: flex;flex-direction: column;justify-content: center;width: 530px;align-items: center;">
+        <img src="recursos/imgs/DAF_FITO_M4A2_RIM_ilustra04.svg " style="width: 480px;">
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').click(apagarJanelas);
+        let check = $(document).find('[id^=check]').hide();
+        apagarJanelas();
+
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+                $(check[index]).fadeIn();
+                $(botao).css({ 'opacity': '1', 'border': '5px solid #edebd3' });
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

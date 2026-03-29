@@ -1,0 +1,155 @@
+<style>
+    .flip-box {
+        background-color: transparent;
+        width: 195px;
+        height: 260px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px;
+        cursor: pointer;
+    }
+
+    .flip-box-inner {
+        position: relative;
+        width: 195px;
+        height: 260px;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    .flip-box-inner:hover {
+        transform: rotateY(180deg);
+    }
+
+    .flip-box-front,
+    .flip-box-back {
+        position: absolute;
+        width: 195px;
+        height: 260px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .flip-box-front {
+        background-color: #bbb;
+        color: black;
+    }
+
+    .flip-box-back {
+        background-color: #fac189;
+        color: white;
+        transform: rotateY(180deg);
+    }
+
+    audio {
+        margin-top: 10px;
+    }
+</style>
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M4A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div class="coluna-esquerda largura-1_1 "
+    style="display: flex;height: 380px;flex-direction: column;justify-content: center;align-items: center;">
+    <div>
+        <p>Inicialmente, optamos por utilizar o termo condições para abranger síndromes, doenças, transtornos e
+            distúrbios.</p>
+        <div class="animate__animated animate__backInLeft"
+            style="display: flex;align-items: center;justify-content: center;gap: 10px;">
+            <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img style=" width: 195px;" src="recursos/imgs/DAF_FITO_M3A4_RIM_ilustra14.svg">
+                        </div>
+                        <div class="flip-box-back">
+                            <p style=" margin: auto; margin-top: 0px; padding: 10px; text-align: center; color: black;">
+                                As bases biológicas dos transtornos depressivos podem ser parcialmente explicadas por
+                                meio da teoria monoaminérgica da depressão. Essa proposição sugere que a depressão é
+                                consequência de menor disponibilidade de aminas biogênicas cerebrais, particularmente de
+                                serotonina, noradrenalina e/ou dopamina. </p>
+                        </div>
+                    </div>
+                </div>
+                <audio controls="" class="audio-player">
+                    <source src="recursos/audio/DAF_FITO_M4A1_RAU_1.mp3" type="audio/mpeg">
+                    Seu navegador não suporta a tag de áudio.
+                </audio>
+            </div>
+            <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img style=" width: 195px;" src="recursos/imgs/DAF_FITO_M3A4_RIM_ilustra15.svg">
+                        </div>
+                        <div class="flip-box-back">
+                            <p
+                                style=" margin: auto; margin-top: 0px; padding: 10px; text-align: center; color: black; font-size: 11px;">
+                                Tal teoria foi reforçada pelo sucesso do tratamento com medicamentos antidepressivos,
+                                cujo mecanismo de ação envolve maior disponibilidade desses neurotransmissores na fenda
+                                sináptica, seja pela inibição do processo de receptação, seja pela inibição da enzima
+                                responsável pela degradação, a monoaminoxidase (MAO). No entanto, como esses
+                                medicamentos não são eficazes em todos os indivíduos com depressão, sugere-se que a
+                                deficiência na sinalização de monoaminas não seja suficiente para explicar completamente
+                                as causas dessa condição. </p>
+                        </div>
+                    </div>
+                </div>
+                <audio controls="" class="audio-player">
+                    <source src="recursos/audio/DAF_FITO_M4A1_RAU_2.mp3" type="audio/mpeg">
+                    Seu navegador não suporta a tag de áudio.
+                </audio>
+            </div>
+            <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img style=" width: 195px;" src="recursos/imgs/DAF_FITO_M3A4_RIM_ilustra16.svg">
+                        </div>
+                        <div class="flip-box-back">
+                            <p
+                                style=" margin: auto; margin-top: 0px; padding: 10px; text-align: center; color: black;font-size: 11px;">
+                                Pacientes com depressão apresentam níveis séricos de citocinas pró-inflamatórias
+                                aumentados, níveis esses que voltam ao normal com o tratamento com alguns
+                                antidepressivos. Sendo assim, observa-se uma correlação das células gliais com
+                                neuroinflamação (neuroinflamação neurogênica) e depressão. A hipótese imunológica propõe
+                                que a elevação na produção de citocinas pró-inflamatórias resulta nos sintomas
+                                relacionados à depressão, pois estas citocinas atuariam como neuromoduladores,
+                                intervindo nos aspectos neuroquímicos, neuroendócrinos e comportamentais dos transtornos
+                                depressivos.
+                            </p>
+                            <!-- <ul style="margin-left: 10px; margin-top: -10px;">
+                                <li>ser uma prática essencialmente médica;</li>
+                                <li>ter atuação médica limitada aos locais de trabalho, ainda que o serviço pudesse ser
+                                    prestado nas proximidades;</li>
+                                <li>minimizar os riscos que pudessem acarretar prejuízo à saúde do trabalhador e
+                                    impedi-lo de produzir;</li>
+                                <li>colaborar com os processos de alocação dos trabalhadores a partir do critério de
+                                    aptidão;</li>
+                                <li>considerar a dimensão de saúde física e mental;</li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+                <audio controls="" class="audio-player">
+                    <source src="recursos/audio/DAF_FITO_M4A1_RAU_3.mp3" type="audio/mpeg">
+                    Seu navegador não suporta a tag de áudio.
+                </audio>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0; ">
+    <img src="recursos/imgs/DAF_FITO_M4A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<script>
+    $(document).ready(function () {
+        $('.audio-player').on('play', function () {
+            // Pausa todos os áudios, menos o que foi clicado
+            $('.audio-player').not(this).each(function () {
+                this.pause();
+                this.currentTime = 0; // Opcional: reinicia o áudio se quiser
+            });
+        });
+    });
+</script>

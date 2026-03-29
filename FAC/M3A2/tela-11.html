@@ -1,0 +1,63 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M3A3_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div>
+    <div style="display: flex;align-items: center;height: 330px;justify-content: space-evenly;">
+        <div style="width: 399px;">
+            <p>Medicamentos que atuam na cascata do ácido araquidônico, o primeiro alvo biológico que vamos descrever
+                adiante, são os mais comuns no mercado, porque é o mecanismo de ação do ácido acetil-salicílico
+                (Aspirina®), a primeira molécula anti-inflamatória descrita e pesquisada pela ciência. Na sequência,
+                pesquisadores foram identificando e descrevendo vários outros mecanismos de ação anti-inflamatória.
+                Curiosamente, é comum as plantas atuarem em diferentes alvos biológicos ao mesmo tempo.</p>
+            <p><b>Clique</b> na imagem e veja quais são os principais alvos biológicos para inflamação.</p>
+        </div>
+        <div class="animate__animated animate__backInRight">
+            <img id="botao_1" src="recursos/imgs/DAF_FITO_M3A2_RIM_ilustra05.svg " style="width: 340px;">
+        </div>
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M3A3_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan" style="cursor: pointer; display: none;">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 30px;display: flex;flex-direction: column;justify-content: center;width: 530px;align-items: center;">
+        <div>
+            <p>Os principais alvos biológicos para inflamação incluem:</p>
+            <ul>
+                <li>Derivados do ácido araquidônico (eicosanoides)</li>
+                <li>Células do sistema imunológico e retículo-endotelial</li>
+                <li>Sistema do complemento</li>
+                <li>Fator de ativação plaquetária (PAF)</li>
+                <li>Óxido nítrico</li>
+                <li>Proteína C reativa (PCR)</li>
+                <li>Citocinas</li>
+                <li>Fatores de transcrição</li>
+            </ul>
+        </div>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').click(apagarJanelas);
+        // let check = $(document).find('[id^=check]').hide();
+        apagarJanelas();
+
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+                // $(check[index]).fadeIn();
+                // $(botao).css({ 'opacity': '1', 'border': '5px solid #edebd3' });
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

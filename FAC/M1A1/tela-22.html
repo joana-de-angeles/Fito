@@ -1,0 +1,73 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div>
+    <div style="display: flex;align-items: center;height: 320px;justify-content: space-around;">
+        <div style="width: 460px;">
+            <h1 style="width: 433px;">A importância da Etnofarmacologia para as Políticas de Saúde</h1>
+            <p style="margin-top: 20px;">A <b>Etnofarmacologia</b> refere-se ao estudo farmacológico de plantas e outros
+                recursos naturais utilizados por diferentes sociedades, partindo de hipóteses baseadas nos usos
+                relatados pelas populações tradicionais. É um campo interdisciplinar que serve de base para a
+                estruturação de pesquisas voltadas para o desenvolvimento tecnológico de produtos fitoterápicos e outros
+                derivados de plantas medicinais, o qual envolve toda a cadeia produtiva e de consumo, ou seja, desde a
+                planta medicinal até o fitoterápico.</p>
+            <p>
+                <b>Clique</b> na imagem para entender melhor sobre essa linha de pesquisa.
+            </p>
+        </div>
+        <div class="animate__animated animate__backInRight">
+            <img id="botao_1" src="recursos/imgs/DAF_FITO_M1A2_RIM_ilustra44.svg "
+                style="width: 292px;margin-right: -2px;">
+        </div>
+    </div>
+</div>
+<footer style="padding: 0; ">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1"
+    style="position: absolute;background-color: rgb(237, 235, 211);top: 233px;left: 172px;width: 520px;border-radius: 16px;padding: 14px;">
+    <div>
+        <p>Essa linha de pesquisa busca fortalecer a indústria nacional para a independência quanto ao desenvolvimento e
+            produção de Insumos Farmacêuticos Ativos Vegetais (IFAV), o que pode ser considerado uma estratégia de
+            soberania nacional.</p>
+    </div>
+    <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg" style="position: absolute;top: 9px;right: 7px;width: 20px;">
+</div>
+<div id="conteudo"
+    style="position: absolute;background-color: #BCAA8A;top: 266px;right: 370px;width: 475px;border-radius: 16px;padding: 16px 13px;">
+    <p style="font-size: 10px;">
+        Essa linha de pesquisa busca fortalecer a indústria nacional para a independência quanto ao desenvolvimento e
+        produção de Insumos Farmacêuticos Ativos Vegetais (IFAV). A Etnofarmacologia é considerada uma subárea ou linha
+        de pesquisa da Etnobotânica.
+
+        Essa linha de pesquisa busca fortalecer a indústria nacional para a independência quanto ao desenvolvimento e
+        produção de Insumos Farmacêuticos Ativos Vegetais (IFAV). A Etnofarmacologia é considerada uma subárea ou linha
+        de pesquisa da Etnobotânica.
+    </p>
+</div>
+<script>
+    $(() => {
+        let conteudo = $('#conteudo').hide();
+        $('#hotWord-bt').css('cursor', 'pointer').hover(() => {
+            conteudo.fadeIn()
+        })
+        $('#hotWord-bt').mouseout(() => {
+            conteudo.fadeOut()
+        })
+
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

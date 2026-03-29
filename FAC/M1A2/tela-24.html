@@ -1,0 +1,315 @@
+<style>
+    .area-interativa {
+        position: relative;
+        width: 500px;
+        display: flex;
+        justify-content: flex-start;
+        gap: 44px;
+    }
+
+    .imagem-base {
+        width: 300px;
+        display: block;
+        position: relative;
+        z-index: -1;
+    }
+
+    .drop-zone {
+        position: absolute;
+        width: 137px;
+        height: 36px;
+        border: 2px dashed transparent;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .piece {
+        width: 137px;
+        height: 36px;
+        background-color: #E1C99B;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: grab;
+    }
+
+    .popup1 {
+        display: none;
+        position: absolute;
+        top: -45px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #f4f4e3;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        width: 600px;
+        height: 330px;
+        overflow-y: scroll;
+    }
+
+    .popup1 .fechar {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 20px;
+        cursor: pointer;
+    }
+
+    .error {
+        border: 2px solid red;
+        animation: shake 0.5s ease-in-out;
+    }
+
+    @keyframes shake {
+        0% {
+            transform: translateX(0);
+        }
+
+        25% {
+            transform: translateX(-5px);
+        }
+
+        50% {
+            transform: translateX(5px);
+        }
+
+        75% {
+            transform: translateX(-5px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+</style>
+
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg"
+        style="width: 100%; margin-top: 10px; position: relative; z-index: -1;">
+</div>
+
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: -30px;">
+    <div style="width: 68%; display: flex; flex-direction: column;">
+        <p>Agora, vamos conhecer algumas preparações caseiras. Arraste os títulos para cada uma das imagens
+            correspondentes.</p>
+    </div>
+
+    <div class="area-interativa">
+        <img class="imagem-base  animate__animated animate__backInLeft"
+            src="recursos/imgs/DAF_FITO_M1A2_RIM_ilustra38.svg" alt="Imagem base">
+
+
+        <div id="zone1" class="drop-zone" style="top: 114px; left: 3px;  " ondrop="drop(event, 1)"
+            ondragover="allowDrop(event)"></div>
+        <div id="zone2" class="drop-zone" style="top: 114px; left: 159px;  " ondrop="drop(event, 2)"
+            ondragover="allowDrop(event)"></div>
+        <div id="zone3" class="drop-zone" style="top: 268px; left: 3px;  " ondrop="drop(event, 3)"
+            ondragover="allowDrop(event)"></div>
+        <div id="zone4" class="drop-zone" style="top: 269px; left: 159px;  " ondrop="drop(event, 4)"
+            ondragover="allowDrop(event)"></div>
+
+
+        <div id="pieces-container"
+            style="display: flex; flex-direction: column; align-items: center; margin-left: 20px; gap: 20px;">
+
+            <div id="piece3" class="piece" draggable="true" ondragstart="drag(event)">Compressa</div>
+            <div id="piece4" class="piece" draggable="true" ondragstart="drag(event)">Emplastro/cataplasma</div>
+            <div id="piece1" class="piece" draggable="true" ondragstart="drag(event)">Banho de assento</div>
+            <div id="piece2" class="piece" draggable="true" ondragstart="drag(event)">Bochecho/gargarejo</div>
+        </div>
+
+
+        <div id="janela_1" class="popup1" style="overflow-y: hidden;">
+            <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg" class="fechar" onclick="fecharJanela('janela_1')">
+            <p><b>Banho de assento </b></p>
+            <p>
+                É a imersão em água morna, na posição sentada, cobrindo com quantidade suficiente as nádegas e o
+                quadril, geralmente em bacia esmaltada ou em louça sanitária apropriada e previamente higienizada.
+                Diversas plantas medicinais frescas ou suas partes secas, além de óleos essenciais, podem ser
+                adicionados ao banho.
+            </p>
+
+            <p style="text-align: center;"><b>Exemplo de prescrição de banho de assento.</b></p>
+            <div style="display: flex; justify-content: center;">
+                <div
+                    style="width: 485px;background: #E8CBB3 0% 0% no-repeat padding-box;border-radius: 16px;padding: 7px;">
+                    <p>Paciente fictício</p>
+                    <p>Uso tópico:</p>
+                    <p><i>Schinus terebinthifolia</i>, entrecasca rasurada ou triturada (aroeira) <span
+                            style="margin-left: 56px;">100 g</span></p>
+                    <p>Água q.s.p. <span style="margin-left: 384px;">1 litro</span></p>
+                    <p>Preparar uma decocção colocando as entrecascas para ferver durante 5 a 10 minutos, coar e esperar
+                        esfriar. Fazer banho de assento por 15 minutos, no mesmo dia do preparo, diariamente por 2
+                        semanas. Não utilizar decocções preparadas no dia anterior ou há mais tempo.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="janela_2" class="popup1">
+            <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg" class="fechar" onclick="fecharJanela('janela_2')">
+            <p><b>Bochecho e gargarejo</b></p>
+            <p>
+                Bochecho é uma forma de tratamento que consiste em reter o líquido dentro da cavidade oral e fazer
+                movimentos voluntários de agitação do líquido durante 30 segundos, desprezando-o ao final. No gargarejo,
+                o líquido é mantido mais próximo da orofaringe, com a cabeça um pouco elevada, e o paciente expele ar,
+                fazendo o líquido borbulhar durante 30 segundos, desprezando-o ao final. São indicados para o tratamento
+                de condições da mucosa orofaríngea. Podem ser feitos com extratos aquosos (infuso ou decocto) ou com
+                tinturas e/ou extratos fluidos veiculados em água, com as espécies que possuam atividade
+                anti-inflamatória e/ou antisséptica. Geralmente, as tinturas e alcoolaturas são diluídas em água na
+                proporção de 1 parte da tintura para 9 partes de água (10%). Os extratos fluidos podem ser diluídos a 1%
+                (aproximadamente 30 gotas em 150 mL de água).
+            </p>
+            <p style="text-align: center;"><b>Exemplo de prescrição de bochecho.</b></p>
+            <div style="display: flex; justify-content: center;">
+                <div
+                    style="width: 485px;background: #E8CBB3 0% 0% no-repeat padding-box;border-radius: 16px;padding: 7px;">
+                    <p>Paciente fictício</p>
+                    <p>Uso tópico:</p>
+                    <p><i>Malva sylvestris</i>, folha e/ou flor (malva) <span style="margin-left: 56px;">4,5 a 7,5
+                            g</span></p>
+                    <p>Água q.s.p. <span style="margin-left: 384px;">150 mL</span></p>
+                    <p>Preparar uma decocção colocando a droga vegetal para ferver durante 15 minutos, coar e esperar
+                        esfriar. Fazer bochecho durante 30 segundos, 3 vezes ao dia.</p>
+                </div>
+            </div>
+            <p style="text-align: center;"><b>Exemplo de prescrição de gargarejo.</b></p>
+            <div style="display: flex; justify-content: center;">
+                <div
+                    style="width: 485px;background: #E8CBB3 0% 0% no-repeat padding-box;border-radius: 16px;padding: 7px;">
+                    <p>Paciente fictício</p>
+                    <p>Uso tópico:</p>
+                    <p>Tintura de <i>Punica granatum</i>, pericarpo (romã) (RDE: 1:5) <span
+                            style="margin-left: 56px;">15mL</span></p>
+                    <p>Água q.s.p. <span style="margin-left: 384px;">150 mL</span></p>
+                    <p>
+                        Diluir 15 mL da tintura em 150 mL de água. Fazer bochechos e gargarejos três vezes ao dia.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="janela_3" class="popup1" style="overflow-y: hidden; ">
+            <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg" class="fechar" onclick="fecharJanela('janela_3')">
+            <p><b>Compressa</b></p>
+            <p>
+                É uma forma de tratamento que consiste em colocar, sobre o local lesionado, uma gaze, algodão ou pano
+                limpo umedecido por uma forma farmacêutica líquida (extrato aquoso, extrato fluido, glicólico e/ou
+                tinturas), dependendo da indicação de uso.
+            </p>
+
+            <p style="text-align: center;"><b>Exemplo de prescrição de compressa.</b></p>
+            <div style="display: flex; justify-content: center;">
+                <div
+                    style="width: 485px;background: #E8CBB3 0% 0% no-repeat padding-box;border-radius: 16px;padding: 7px;">
+                    <p>Paciente fictício</p>
+                    <p>Uso tópico:</p>
+                    <p><i>Varronia curassavica</i>, folhas secas (erva-baleeira) <span style="margin-left: 204px;">3
+                            g</span></p>
+                    <p>Água q.s.p. <span style="margin-left: 384px;">150 mL</span></p>
+                    <p>Aquecer 150 mL de água até a fervura e desligar o fogo. Adicionar a planta, tampar e aguardar 5
+                        minutos, depois coar. Aplicar na forma de compressas na região afetada, de duas a três vezes ao
+                        dia.</p>
+                </div>
+            </div>
+        </div>
+        <div id="janela_4" class="popup1">
+            <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg" class="fechar" onclick="fecharJanela('janela_4')">
+            <p><b>Emplastro e cataplasma</b></p>
+            <p>Emplastro é a forma farmacêutica para aplicação externa. Consiste em uma base adesiva contendo um ou mais
+                princípios ativos distribuídos em uma camada uniforme num suporte apropriado feito de material sintético
+                ou natural. Destinada a manter o princípio ativo em contato com a pele atuando como protetor ou como
+                agente queratolítico.</p>
+            <p>Cataplasma é uma preparação caseira feita a partir de substâncias pastosas, tais como argilas ou pastas
+                feitas com farinhas, onde podem ser acrescentadas plantas medicinais frescas ou secas, sob a forma de
+                droga vegetal pulverizada ou rasurada, extrato aquoso, óleos vegetais e/ou essenciais. Pode ainda ser
+                aplicada a planta medicinal fresca e macerada sobre a superfície corporal a ser tratada. Deve ser
+                preparado em recipiente de vidro ou porcelana, e só deve ser aplicado em pele íntegra (sem ferimentos).
+                Geralmente é indicado para efeito local no tratamento da dor e inflamação. Embora possa haver absorção
+                transdérmica de ativos com efeito sistêmico, não é comum que fitoterápicos sejam utilizados desta forma.
+                Teoricamente, haveria o benefício de evitar o metabolismo hepático de primeira passagem, como ocorre com
+                os medicamentos administrados por via oral ou entérica.</p>
+            <p style="text-align: center;"><b>Exemplo de prescrição de cataplasma.</b></p>
+            <div style="display: flex; justify-content: center;">
+                <div
+                    style="width: 485px;background: #E8CBB3 0% 0% no-repeat padding-box;border-radius: 16px;padding: 7px;">
+                    <p>Paciente fictício</p>
+                    <p>Uso tópico:</p>
+                    <p><i>Aloe vera</i>, olhas frescas (babosa) <span style="margin-left: 274px;">1 folha</span></p>
+                    <p>Retirar uma folha pela base. Cortar a outra extremidade e deixar em pé com a base para baixo por
+                        duas horas, para escoar o líquido amarelado e de odor forte. Lavar em água corrente e descascar
+                        sem deixar a parte verde no gel. Picar o gel e bater em liquidificador, previamente higienizado,
+                        por cerca de 40 segundos para manter a consistência do gel. Como a folha é formada por 95% de
+                        água, se bater muito a consistência ficará líquida. Deixar em repouso por 15 minutos para que a
+                        espuma diminua. Aplicar o gel diretamente sobre a lesão, de 2 a 3 vezes ao dia. Cobrir a lesão
+                        com gaze e manter ocluída até a próxima troca.</p>
+                </div>
+            </div>
+            <!-- <p style="text-align: center;"><b>Exemplo de prescrição de gargarejo.</b></p> -->
+            <!-- <div style="display: flex; justify-content: center;">
+                <div
+                    style="width: 485px;background: #E8CBB3 0% 0% no-repeat padding-box;border-radius: 16px;padding: 7px;">
+                    <p>Paciente fictício</p>
+                    <p>Uso tópico:</p>
+                    <p>Tintura de <i>Punica granatum</i>, pericarpo (romã) (RDE 1:10) <span
+                            style="margin-left: 56px;">15mL</span></p>
+                    <p>Água q.s.p. <span style="margin-left: 384px;">150 mL</span></p>
+                    <p>
+                        Preparar uma decocção colocando a droga vegetal para ferver durante 15 minutos, coar e esperar
+                        esfriar. Fazer gargarejo durante 30 segundos, 3 vezes ao dia.
+                    </p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1; position: relative;">
+</footer>
+
+<script>
+    function allowDrop(event) {
+        event.preventDefault();
+    }
+
+    function drag(event) {
+        event.dataTransfer.setData("text", event.target.id);
+    }
+
+    function drop(event, zoneId) {
+        event.preventDefault();
+        const pieceId = event.dataTransfer.getData("text");
+        const piece = document.getElementById(pieceId);
+        const dropZone = document.getElementById("zone" + zoneId);
+
+
+        if (pieceId === "piece" + zoneId) {
+
+            if (!dropZone.hasChildNodes()) {
+                dropZone.appendChild(piece);
+                piece.setAttribute('draggable', 'false');
+                document.getElementById("janela_" + zoneId).style.display = 'block';
+            }
+        } else {
+
+            const container = document.getElementById("pieces-container");
+            container.appendChild(piece);
+
+
+            dropZone.classList.add('error');
+            setTimeout(() => dropZone.classList.remove('error'), 1000);
+        }
+    }
+
+    function fecharJanela(id) {
+        document.getElementById(id).style.display = 'none';
+    }
+
+
+    const popup1s = document.querySelectorAll('.popup1');
+    popup1s.forEach(p => p.style.display = 'none');
+</script>

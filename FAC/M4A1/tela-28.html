@@ -1,0 +1,96 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M4A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div>
+    <div style="display: flex;align-items: center;height: 340px;justify-content: space-evenly;">
+        <div style="width: 430px;">
+            <p>Preocupações, divórcios e luto podem desencadear episódios de insônia. Dores, necessidade de urinar à
+                noite e apneia pioram a qualidade do sono. A insônia está entre as principais queixas de mulheres na
+                menopausa e é queixa comum em pacientes idosos.</p>
+            <p>O consumo de café e de refrigerantes com cafeína pode impedir o adormecer. Também deve ser evitado o
+                consumo de chás ou fitoterápicos com propriedades psicoestimulantes ou “tônicas” após as 16 horas,
+                em
+                razão do risco de prejudicar o sono. Alguns exemplos de espécies com tais propriedades
+                farmacológicas
+                incluem: Ginkgo biloba, as espécies denominadas “ginsengs” (<i>
+                    Panax ginseng, Eleutherococcus senticosus,
+                    Panax quinquefolius, Pfaffia</i> spp, <i>Lepidium meyenii</i> etc.<i>), Rodhiola rosea, Camelia
+                    sinensis,
+                    Ilex
+                    paraguariensis,
+                    Paullinia cupana</i> (guaraná), <i>Ptychopetalum uncinatum</i> (marapuama).</p>
+            <div style="display: flex;justify-content: center;align-items: center;margin-top: 40px;">
+                <div id="botao_1"
+                    style="background-color: rgb(237, 235, 211);border-radius: 45px;display: flex;align-items: center;justify-content: center;padding: 0px 20px;opacity: 1;border: 5px solid rgb(237, 235, 211);font-size: 10px;width: 280px;">
+                    <p style="font-size: 10px;margin-left: -70px;"><b>Clique</b> na prancheta e veja os tipos de
+                        tratamentos.
+                    </p>
+                    <img src="recursos/icones/DAF_FITO_M1A1_RIM_prancheta.svg"
+                        style="width: 50px;position: absolute;right: 498px;">
+                </div>
+            </div>
+        </div>
+        <div class="animate__animated animate__backInRight">
+            <img src="recursos/imgs/DAF_FITO_M3A4_RIM_ilustra19.svg" style="width: 350px;">
+        </div>
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M4A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan" style=" display: none;">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 30px;display: flex;flex-direction: column;justify-content: center;width: 530px;align-items: center;">
+        <div>
+            <p><b>Tratamento</b></p>
+            <p>O tratamento dos transtornos do sono envolve, inicialmente, uma avaliação detalhada, que pode incluir
+                polissonografia para se descartar alterações mais graves. O tratamento medicamentoso pode envolver
+                ansiolíticos, antidepressivos e indutores do sono. Os benzodiazepínicos e indutores do sono podem
+                ser
+                usados apenas de forma emergencial, uma vez que levam à tolerância, dependência e declínio cognitivo
+                a
+                longo prazo.</p>
+            <p><b>Tratamento fitoterápico</b></p>
+            <p>Os principais mecanismos pelos quais os fitoterápicos exercem atividade sedativa ou hipnótica
+                normalmente envolvem a interação com o receptor GABA<sub>A</sub>. Determinadas plantas medicinais
+                possuem algumas dessas atividades.
+            </p>
+            <div style="display: flex;align-items: center; justify-content: center; flex-direction: column;">
+                <p style="font-size: 10px;"><b>Quadro 8</b> - Exemplos de plantas medicinais indicadas nos transtornos
+                    do sono.</p>
+                <div style="background-color: #E1C99B; padding: 10px 10px;">
+                    <ul>
+                        <li><i>Melissa officinalis</i> (Lamiaceae) (melissa).</li>
+                        <li><i>Valeriana officinalis</i> (Caprifoliaceae) (valeriana).</li>
+                        <li><i>Passiflora incarnata</i> (Passifloraceae) (maracujá).</li>
+                    </ul>
+                </div>
+                <!-- <p style="font-size: 10px;">Fonte: CID-11, 2019.</p> -->
+            </div>
+        </div>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').click(apagarJanelas);
+        let check = $(document).find('[id^=check]').hide();
+        apagarJanelas();
+
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+                $(check[index]).fadeIn();
+                $(botao).css({ 'opacity': '1', 'border': '5px solid #edebd3' });
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

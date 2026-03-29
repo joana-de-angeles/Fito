@@ -1,0 +1,182 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div style="display: flex;align-items: center;justify-content: space-evenly;">
+    <div class="animate__animated animate__backInLeft"
+        style="width: 80%;display: flex;flex-direction: column;align-items: center;justify-content: center;height: 340px;">
+        <div>
+            <h1>DOENÇAS INFLAMATÓRIAS INTESTINAIS</h1>
+            <p>As doenças inflamatórias intestinais incluem a doença de Crohn e a retocolite ulcerativa, também chamada
+                de
+                retocolite ulcerativa idiopática ou inespecífica (RCUI).</p>
+        </div>
+        <div style="display: flex;justify-content: space-around;width: 662px;">
+            <div id="botaoAba_1"
+                style="width: 174px; height: 33px; background: rgb(237, 235, 211); display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                <p><b>Doença de Crohn</b></p>
+            </div>
+            <div id="botaoAba_2"
+                style="width: 174px; height: 33px; background: 0% 0% no-repeat padding-box padding-box rgb(200, 187, 165); display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                <p><b>Retocolite ulcerativa</b></p>
+            </div>
+        </div>
+        <div
+            style="width: 662px;height: 278px;background: #EDEBD3 0% 0% no-repeat padding-box;border-radius: 18px;display: flex;align-items: center;justify-content: center;">
+            <div id="instrucao" style="width: 430px;">
+                <p style="text-align: center;">Para conhecê-las, <b>clique</b> em cada um dos títulos.</p>
+            </div>
+            <div id="aba_1">
+                <div style="display: flex;align-items: center; width: 570px;">
+                    <p>A doença de Crohn é uma doença inflamatória crônica sistêmica,
+                        caracterizada por inflamação intestinal focal, assimétrica, transmural e, ocasionalmente,
+                        granulomatosa, afetando principalmente o trato gastrointestinal. É mais comum entre 10 e 30 anos
+                        de idade, e as mulheres são ligeiramente mais acometidas. Os fatores de risco para a doença de
+                        Crohn incluem: histórico familiar da doença; uso de antibióticos, especialmente tetraciclinas;
+                        tabagismo; gastroenterite causada por <i>Salmonella</i> ou <i>Campylobacter</i>; e sedentarismo.
+                        A
+                        doença de
+                        Crohn pode estar associada a várias outras doenças inflamatórias, como esclerose múltipla,
+                        psoríase, artrites, tireoidite de Hashimoto, asma, vasculites, doença celíaca etc. Além disso,
+                        transtornos de ansiedade e depressão estão associados a doenças inflamatórias intestinais. A
+                        causa da doença ainda é desconhecida, mas parece envolver fatores ambientais, genéticos,
+                        microbioma intestinal e resposta imune inapropriada.
+                    </p>
+                </div>
+            </div>
+            <div id="aba_2">
+                <div style="display: flex;justify-content: center;align-items: center; width: 570px;">
+                    <p>A retocolite ulcerativa, diferentemente da doença de Crohn, afeta somente a
+                        mucosa do trato gastrointestinal, preservando as demais camadas da parede. Trata-se de uma
+                        doença inflamatória crônica que envolve a mucosa do reto e da porção distal do cólon, indo em
+                        direção ao ceco. Esta doença é mais comum entre 10 e 40 anos de idade, mas pode ocorrer em
+                        qualquer idade. É igualmente frequente em homens e mulheres, sendo mais comum em pessoas de
+                        ascendência judia e em brancos. Também existem fatores de risco para RCUI, embora incertos: uso
+                        de isotretinoína; uso de anti-inflamatórios não esteroidais; uso de antibióticos; gastroenterite
+                        causada por <i>Salmonella</i> ou <i>Campylobacter</i>; tipo de dieta; condições ruins de higiene
+                        etc. A
+                        doença pode estar associada a manifestações extraintestinais em até 25% dos pacientes:
+                        dermatológicas (psoríase, eritema nodoso), reumatológicas (artrites), metabólicas (osteopenia,
+                        osteoporose), oftalmológicas (uveíte), anemia etc. Como na doença de Crohn, transtornos de
+                        ansiedade e depressão estão associados a doenças inflamatórias intestinais. Pode haver também
+                        associação com infecções por <i>Clostridium difficile</i> ou citomegalovírus, ou ainda
+                        deficiência de
+                        vitamina D. A causa da doença é desconhecida, mas parece envolver a microbiota intestinal e
+                        fatores genéticos e ambientais.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<script>
+    $(() => {
+        let aba = $(document).find('[id^=aba]')//.css('cursor', 'pointer');
+        apagaraba();
+        $('#botaoAba_1').css('background', '#EDEBD3');
+        $(document).find('#instrucao').show();
+        $(document).find('[id^=botaoAba]').css('cursor', 'pointer').map((index, botaoAba) => {
+            $(botaoAba).click(() => {
+                $(document).find('[id^=botaoAba]').map((i, obj) => {
+                    $(obj).css('background', '#C8BBA5');
+                })
+                $(botaoAba).css('background', '#EDEBD3');
+                apagaraba();
+                $(aba[index]).fadeIn();
+                miniNavegacao(aba[index]);
+            })
+        })
+        function apagaraba() {
+            $(document).find('#instrucao').hide();
+            aba.map((index, abas) => {
+                $(abas).hide();
+            })
+        }
+
+
+        function miniNavegacao(aba) {
+            let janelasDentroAbas = $(aba).find('[id^=janela]');
+            let avanca = $(aba).find('[id^=avanca]').css('cursor', 'pointer').on('click', avancar);
+            let volta = $(aba).find('[id^=volta]').css('cursor', 'pointer').on('click', voltar);
+            let contador = 1;
+            $(volta).css('opacity', '0.6');
+            $(avanca).css('opacity', '1');
+
+            apagarJanelas();
+            $(aba).find('[id^=janela_1]').show();
+
+            function avancar() {
+                if (contador < janelasDentroAbas.length) {
+                    apagarJanelas();
+                    contador++;
+                    $(aba).find(`[id^=janela_${contador}]`).show();
+                }
+                mudarBotoes();
+            }
+
+            function voltar() {
+                if (contador > 1) {
+                    apagarJanelas();
+                    contador--;
+                    $(aba).find(`[id^=janela_${contador}]`).show();
+                }
+                mudarBotoes();
+            }
+
+            function mudarBotoes() {
+                if (contador == 1) {
+                    $(volta).css('opacity', '0.6');
+                    $(avanca).css('opacity', '1');
+                }
+                if (contador == janelasDentroAbas.length) {
+                    $(volta).css('opacity', '1');
+                    $(avanca).css('opacity', '0.6');
+                }
+                if (contador > 1 && contador < janelasDentroAbas.length) {
+                    $(volta).css('opacity', '1');
+                    $(avanca).css('opacity', '1');
+                }
+            }
+
+            let botoes = $(aba).find('[id^=botao]').map((index, botao) => {
+                $(botao).click(() => {
+                    apagarJanelas();
+                    $(janelasDentroAbas[index + 1]).show();
+                })
+            })
+
+            function apagarJanelas() {
+                janelasDentroAbas.map((index, janela) => {
+                    console.log('apagando janela: ', index);
+                    $(janela).hide();
+                })
+            }
+        }
+
+        // janela dentro da mininavegacao
+        let janelasClose = $(document).find('[id^=close]').css('cursor', 'pointer');
+        apagarJanelasClose();
+        janelasClose.map((index, janeala) => {
+            $(janeala).click(() => {
+                console.log('close');
+                $(janeala).hide()
+            });
+
+        })
+
+        let botoesClose = $(document).find('[class^=bot_close]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelasClose();
+                $(janelasClose[index]).fadeIn();
+            })
+        })
+        function apagarJanelasClose() {
+            janelasClose.map((index, janelaClose) => {
+                $(janelaClose).hide();
+            })
+        }
+    })
+</script>

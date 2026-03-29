@@ -1,0 +1,51 @@
+<div class="largura-1_1">
+	<img src="recursos/imgs/DAF_FITO_M4A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div>
+	<div style="display: flex;align-items: center;height: 340px;justify-content: space-evenly;">
+		<div style="width: 330px;">
+			<p>A Figura seguinte apresenta, de maneira esquemática, a divisão do sistema nervoso autônomo.</p>
+			<p><b>Clique</b> na imagem para ampliar.</p>
+		</div>
+		<div class="animate__animated animate__backInRight">
+			<img id="botao_1" src="recursos/imgs/DAF_FITO_M3A4_RIM_ilustra02.png" style="width: 300px; ">
+			<p style="text-align: center;">Fonte: <a
+					href="https://br.freepik.com/vetores-premium/sistema-nervoso-autonomo-periferico-humano-com-neuronios-da-medula-espinhal-simpatica-sinalizam-esquema-colorido-realista-de-comunicacao_13869990.htm"
+					target="_blank">https://br.freepik.com/</a>
+			</p>
+		</div>
+	</div>
+</div>
+<footer style="padding: 0;">
+	<img src="recursos/imgs/DAF_FITO_M4A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan">
+	<div
+		style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 30px;display: flex;flex-direction: column;justify-content: center;width: 530px;align-items: center;">
+		<img src="recursos/imgs/DAF_FITO_M3A4_RIM_ilustra02.png " style="width: 400px;">
+		<img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+			style="position: absolute;top: 9px;right: 7px;width: 20px;">
+	</div>
+</div>
+<script>
+	$(() => {
+		let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').click(apagarJanelas);
+		let check = $(document).find('[id^=check]').hide();
+		apagarJanelas();
+
+		let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+			$(botao).click(() => {
+				apagarJanelas();
+				$(janelas[index]).fadeIn();
+				$(check[index]).fadeIn();
+				$(botao).css({ 'opacity': '1', 'border': '5px solid #edebd3' });
+			})
+		})
+		function apagarJanelas() {
+			janelas.map((index, janela) => {
+				$(janela).hide();
+			})
+		}
+	})
+</script>

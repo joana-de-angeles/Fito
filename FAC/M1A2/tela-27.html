@@ -1,0 +1,253 @@
+<style>
+    .area-interativa {
+        position: relative;
+        width: 700px;
+        display: flex;
+        justify-content: flex-start;
+        gap: 44px;
+    }
+
+    .imagem-base {
+        width: 550px;
+        display: block;
+        position: relative;
+        z-index: -1;
+    }
+
+    .drop-zone {
+        position: absolute;
+        width: 172px;
+        height: 192px;
+        border: 2px dashed transparent;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .piece {
+        width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: grab;
+    }
+
+    .popup {
+        display: none;
+        position: absolute;
+        top: -45px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #f4f4e3;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        width: 600px;
+        height: 330px;
+        overflow-y: scroll;
+    }
+
+    .popup .fechar {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 20px;
+        cursor: pointer;
+    }
+
+
+    @keyframes shake {
+        0% {
+            transform: translateX(0);
+        }
+
+        25% {
+            transform: translateX(-5px);
+        }
+
+        50% {
+            transform: translateX(5px);
+        }
+
+        75% {
+            transform: translateX(-5px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+
+    /* Lupa fixada na zona */
+    .piece.fixed {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
+</style>
+
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div class="coluna-esquerda largura-1_1"
+    style="display: flex;justify-content: center;align-items: center; height: 320px;flex-direction: column;">
+    <div style="width: 83%;">
+        <p>
+            A partir de agora, veremos as particularidades de cada uma das categorias profissionais inscritas nesta
+            edição do curso. <b>Arraste</b> a lupa em cima de cada profissional.
+        </p>
+        <div class="area-interativa">
+            <img class="imagem-base  animate__animated animate__backInUp"
+                src="recursos/imgs/DAF_FITO_M1A2_RIM_ilustra19.svg" alt="Imagem base">
+            <div id="zone1" class="drop-zone" ondrop="drop(event, 1)" ondragover="allowDrop(event)"
+                style="top: 47px; left: 15px;"></div>
+            <div id="zone2" class="drop-zone" ondrop="drop(event, 2)" ondragover="allowDrop(event)"
+                style="top: 47px; left: 187px;"></div>
+            <div id="zone3" class="drop-zone" ondrop="drop(event, 3)" ondragover="allowDrop(event)"
+                style="top: 12px; left: 361px;"></div>
+            <div id="pieces-container"
+                style="display: flex; flex-direction: column; align-items: center; margin-left: 20px; gap: 20px;">
+                <div id="pieceLupa" class="piece" draggable="true" ondragstart="drag(event)"><img
+                        src="recursos/icones/DAF_FITO_M1A2_RIM_ilustra39_LUPA.svg"></div>
+            </div>
+            <div id="janela_1" class="popup" style="overflow-y: hidden; height: auto; top: 28px;">
+                <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg" class="fechar"
+                    onclick="fecharJanela('janela_1')">
+                <p><b>Enfermeiro</b></p>
+                <p>O enfermeiro possui amparo legal para atuar nas Práticas Integrativas e Complementares em Saúde
+                    (PICS), incluindo a fitoterapia, nos termos da Resolução COFEN nº 739, de 5 de fevereiro de 2024,
+                    que regulamenta a atuação do enfermeiro nessas práticas. A prescrição de fitoterápicos pelo
+                    enfermeiro deve respeitar as competências profissionais, os limites legais da profissão e a
+                    legislação sanitária vigente.</p>
+                <p>O exercício da fitoterapia pelo enfermeiro requer <b>formação específica ou capacitação compatível
+                        com a prática</b>, de modo a assegurar uma atuação ética, segura e baseada em evidências.</p>
+            </div>
+            <div id="janela_2" class="popup" style="width: 690px; left: 52%; height: 318px;">
+                <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg" class="fechar"
+                    onclick="fecharJanela('janela_2')">
+                <p><b>Farmacêutico</b></p>
+                <p>A Resolução do Conselho Federal de Farmácia nº 586, de 29 de agosto de 2013 estabelece diretrizes
+                    para a atuação clínica do farmacêutico, incluindo a possibilidade de indicação e manejo terapêutico
+                    de medicamentos e outros produtos com finalidade terapêutica, <b>no âmbito de suas competências
+                        profissionais e conforme as normas sanitárias vigentes</b>. De acordo com o artigo 5º da
+                    referida
+                    resolução, essa atuação refere-se, em especial, a medicamentos e produtos cuja dispensação não exija
+                    prescrição médica, incluindo medicamentos industrializados, preparações magistrais, plantas
+                    medicinais e drogas vegetais, observadas as categorias e listas aprovadas pela autoridade sanitária
+                    federal.</p>
+                <p>A mesma resolução ressalta que tais atividades devem estar fundamentadas em <b>conhecimentos e
+                        habilidades clínicas compatíveis com a prática</b>, abrangendo princípios de boas práticas,
+                    farmacologia
+                    clínica, terapêutica, comunicação interpessoal e compreensão dos processos de saúde e doença. No
+                    caso de terapias relacionadas às Práticas Integrativas e Complementares em Saúde, recomenda-se
+                    formação específica ou capacitação adequada na respectiva área de atuação.</p>
+                <p>No que se refere a medicamentos cuja dispensação exige prescrição médica, o artigo 6º da Resolução
+                    CFF nº 586/2013 prevê a possibilidade de atuação do farmacêutico <b>em contextos institucionais
+                        específicos</b>, condicionada à existência de diagnóstico previamente estabelecido e à inserção
+                    dessa
+                    prática em programas, protocolos, diretrizes ou normas técnicas aprovadas no âmbito de serviços de
+                    saúde, ou ainda em acordos formais de colaboração interprofissional. A norma também estabelece
+                    requisitos adicionais de formação e titulação para essas situações, bem como veda a modificação de
+                    prescrições emitidas por outros profissionais, salvo quando expressamente prevista em acordos de
+                    colaboração, com a devida comunicação e justificativa ao prescritor responsável.</p>
+                <p>É importante destacar que a aplicação prática dessas disposições ocorre em um cenário de <b>debate
+                        jurídico e regulatório em curso no país</b>, envolvendo diferentes conselhos profissionais e
+                    instâncias
+                    do Poder Judiciário. Nesse contexto, a atuação do farmacêutico deve observar não apenas as
+                    resoluções de seu conselho profissional, mas também as decisões judiciais vigentes, as normas
+                    sanitárias aplicáveis e os arranjos institucionais locais, sempre em consonância com os princípios
+                    da segurança do paciente, da ética profissional e do trabalho multiprofissional em saúde.</p>
+            </div>
+            <div id="janela_3" class="popup" style="overflow-y: hidden; height: auto; top: 30px;">
+                <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg" class="fechar"
+                    onclick="fecharJanela('janela_3')">
+
+                <p><b>Médico </b></p>
+                <p>O médico, no exercício regular da profissão, possui competência legal para atuar nas áreas de
+                    diagnóstico, prevenção e tratamento de doenças, incluindo o uso de fitoterápicos, nos termos da
+                    legislação profissional vigente e do Código de Ética Médica. Não há exigência legal de título de
+                    especialista ou certificação específica em fitoterapia para que o médico utilize essa terapêutica na
+                    prática clínica. No entanto, é fortemente recomendável que o médico possua <b>formação, capacitação
+                        ou
+                        conhecimento técnico adequado em fitoterapia</b>, a fim de garantir uma prática baseada em
+                    evidências,
+                    segura e eticamente responsável.</p>
+                <p>A prescrição de fitoterápicos deve observar as normas sanitárias aplicáveis, as indicações aprovadas,
+                    as condições clínicas do paciente e as boas práticas de prescrição médica, conforme orientações do
+                    Conselho Federal de Medicina (CFM) e recomendações da Organização Mundial da Saúde (OMS).</p>
+            </div>
+            <div id="janela_4" class="popup" style="overflow-y: hidden; height: auto; top: 30px;">
+                <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg" class="fechar"
+                    onclick="fecharJanela('janela_4')">
+                <p><b>Nutricionista </b></p>
+                <p>No âmbito da assistência nutricional e dietoterápica, a adoção da fitoterapia pelo nutricionista deve
+                    restringir-se a situações em que os produtos prescritos apresentem indicações de uso direta ou
+                    indiretamente relacionadas aos objetivos do cuidado nutricional, sendo indispensável que o
+                    profissional seja capaz de justificar, monitorar e avaliar os efeitos da prescrição com base em
+                    evidências científicas ou em uso tradicional reconhecido. Nesse contexto, é facultada a todos os
+                    nutricionistas a prescrição de plantas medicinais <i>in natura</i> e de drogas vegetais
+                    exclusivamente nas
+                    formas de infusão, decocção e maceração em água, independentemente de certificação ou título de
+                    especialista em fitoterapia, ao passo que a prescrição de drogas vegetais em formas farmacêuticas,
+                    de medicamentos fitoterápicos, de medicamentos tradicionais fitoterápicos e de preparações
+                    magistrais de fitoterápicos fica condicionada à comprovação de formação específica, por meio de
+                    certificado de curso de pós-graduação <i>lato sensu</i> em nível de especialização em fitoterapia.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+
+<script>
+    let lupaId = "pieceLupa"; // id da lupa
+    let lupaElemento = document.getElementById(lupaId);
+
+    // Função para permitir o drop
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    // Função para definir o comportamento durante o drag
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    // Função para tratar o evento de "drop"
+    function drop(event, zoneId) {
+        event.preventDefault();
+
+        // Coloca a lupa dentro da zona de drop
+        const lupa = document.getElementById("pieceLupa");
+        const zone = document.getElementById("zone" + zoneId);
+
+        // Calcula a posição centralizada da lupa na zona
+        const zoneWidth = zone.offsetWidth;
+        const zoneHeight = zone.offsetHeight;
+        const lupaWidth = lupa.offsetWidth;
+        const lupaHeight = lupa.offsetHeight;
+
+        // Coloca a lupa no centro da zona
+        lupa.style.left = (zone.offsetLeft + (zoneWidth / 1) - (lupaWidth / 1)) + "px";
+        lupa.style.top = (zone.offsetTop + (zoneHeight / 1) - (lupaHeight / 1)) + "px";
+        lupa.classList.add("fixed"); // Marca a lupa como fixa
+
+        // Exibe a janela correspondente à zona de drop
+        const popup = document.getElementById("janela_" + zoneId);
+        popup.style.display = "block"; // Abre a janela
+    }
+
+    // Função para fechar todas as janelas de informação
+    function fecharJanela(janelaId) {
+        const janela = document.getElementById(janelaId);
+        janela.style.display = "none"; // Fecha a janela
+    }
+</script>

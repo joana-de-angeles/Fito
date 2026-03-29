@@ -1,0 +1,82 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M4A2_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div>
+    <div style="display: flex;align-items: center;height: 360px;justify-content: space-around;">
+        <div class="animate__animated animate__backInLeft"
+            style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+            <img id="botao_1" src="recursos/imgs/DAF_FITO_M4A2_RIM_ilustra09.svg " style="width: 320px;">
+        </div>
+        <div style="width: 373px;">
+            <h1>SÍNDROME DA TENSÃO PRÉ-MENSTRUAL (STPM)</h1>
+            <p>A síndrome da tensão pré-menstrual (STPM) se manifesta com diversos sinais e sintomas decorrentes de um
+                aparente desequilíbrio em que o estrogênio prevalece sobre a progesterona, seja por excesso do primeiro,
+                seja por deficiência da última. Outros fatores hormonais, neuroquímicos e psicossociais estão envolvidos
+                na fisiopatologia da STPM.</p>
+            <p>Esses sintomas tendem a se tornar mais intensos com o uso da cafeína e em situações de estresse. Um termo
+                adicional, transtorno disfórico pré-menstrual (TDPM), classificado pela <i>American Psychiatric
+                    Association</i> em 1994 e oficialmente reconhecido como diagnóstico apenas no DSM-5 (2013), exige o
+                cumprimento de critérios rigorosos e sintomatologia mais grave e incapacitante que a STPM. Quatro em
+                cada dez mulheres (40%) experimentam sintomas de STPM e, destas, 5% a 8% sofrem da forma grave, ou TDPM.
+            </p>
+            <p><b>Clique na imagem</b> e conheça as principais manifestações clínicas da STPM e exemplos de plantas
+                medicinais
+                indicadas na síndrome da tensão pré-menstrual (STPM).</p>
+        </div>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<footer style="padding: 0; ">
+    <img src="recursos/imgs/DAF_FITO_M4A2_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 30px;display: flex;flex-direction: column;justify-content: center;width: 530px;align-items: center;">
+        <div>
+            <p><b>Principais manifestações clínicas</b></p>
+            <ul>
+                <li>Irritabilidade</li>
+                <li>Alterações no humor e crises nervosas</li>
+                <li>Dores abdominais (cólicas)</li>
+                <li>Dores nas mamas (mastalgia)</li>
+                <li>Edema e sensação de corpo pesado</li>
+                <li>Fadiga</li>
+                <li>Cefaleia</li>
+            </ul>
+            <p>O tratamento está relacionado a mudanças de hábitos, uso de ansiolíticos ou antidepressivos, e
+                medicamentos que controlem o excesso de estrogênio. Algumas plantas medicinais podem ser indicadas
+                nesses casos, por exemplo:</p>
+            <ul>
+                <li><i>Vitex agnus-castus</i> (Lamiaceae) (vítex)</li>
+                <li><i>Oenothera biennis</i> (Onagraceae) (prímula da tarde)</li>
+                <li><i>Borago officinalis</i> (Boraginaceae) (borragem)</li>
+                <!-- <li><i>Phyllanthus niruri</i> (Phyllanthaceae) (quebra-pedra)</li> -->
+            </ul>
+        </div>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').click(apagarJanelas);
+        let check = $(document).find('[id^=check]').hide();
+        apagarJanelas();
+
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+                $(check[index]).fadeIn();
+                $(botao).css({ 'opacity': '1', 'border': '5px solid #edebd3' });
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

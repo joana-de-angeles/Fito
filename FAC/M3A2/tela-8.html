@@ -1,0 +1,54 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M3A3_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div>
+    <div style="display: flex;align-items: center;height: 340px;justify-content: space-evenly;">
+        <div style="width: 402px;">
+            <p>O processo inflamatório segue uma sequência de eventos, que explica seus sintomas, aponta para os
+                principais alvos biológicos a serem abordados no tratamento, e que, no fim das contas, vão
+                contribuir
+                para sua evolução para cronificação ou cura, de acordo com a resultante da relação entre
+                causa/estímulo
+                nocivo, e adequação da resposta orgânica/eficiência da restauração da homeostase. <b>Clique</b> no
+                <b>Quadro 1</b> para ampliá-lo.
+            </p>
+        </div>
+        <div class="animate__animated animate__backInRight"
+            style="display: flex;flex-direction: column;justify-content: center;align-items: center;width: 390px;">
+            <p>Quadro 1. Principais eventos fisiológicos, enzimas e mediadores envolvidos na resposta inflamatória.
+            </p>
+            <img id="botao_1" src="recursos/imgs/DAF_FITO_M3A2_RIM_Tab01.svg" style="width: 420px; cursor: pointer;">
+            <p>Fonte: o autor.</p>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M3A3_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan" style="cursor: pointer; display: none;">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 30px;display: flex;flex-direction: column;justify-content: center;/* width: 530px; */align-items: center;">
+        <img src="recursos/imgs/DAF_FITO_M3A2_RIM_Tab01.svg" style="width: 720px;background-color: white;">
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').click(apagarJanelas);
+        apagarJanelas();
+
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

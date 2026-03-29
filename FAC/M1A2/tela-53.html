@@ -1,0 +1,308 @@
+<style>
+    th {
+        background-color: #68714b;
+    }
+
+    .caixa-seta {
+        display: flex;
+        align-items: center;
+        font-family: serif;
+    }
+
+    .seta-esquerda {
+        width: 0;
+        height: 0;
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent;
+        border-right: 30px solid #e97a2b;
+        /* cor da seta */
+        margin-right: -5px;
+    }
+
+    .conteudo {
+        background-color: #f5f2df;
+        border: 1px solid black;
+        padding: 10px;
+        max-width: 300px;
+    }
+</style>
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div class="coluna-esquerda largura-1_1"
+    style="display: flex;justify-content: center;align-items: center; height: 320px;flex-direction: column;">
+    <div style="width: 83%;">
+        <p>
+            <b>Clique</b> em cada um dos ícones e veja modelos de receituário para uma prescrição clara e livre de
+            dúvidas para os profissionais de saúde.
+        </p>
+        <div style="display: flex;align-items: center;justify-content: space-around;">
+            <div>
+                <img class="animate__animated animate__backInLeft" src="recursos/imgs/DAF_FITO_M1A2_RIM_ilustra37.svg"
+                    style="width: 570px;">
+            </div>
+        </div>
+    </div>
+    <div>
+        <div id="botao_1" style="position: absolute; width: 148px; height: 155px; top: 206px;left: 189px;"></div>
+        <div id="botao_2" style="position: absolute; width: 148px; height: 155px; top: 206px;left: 372px;"></div>
+        <div id="botao_3" style="position: absolute; width: 148px; height: 155px; top: 206px;right: 185px;"></div>
+    </div>
+
+    <div id="janela_1"
+        style="display: flex; position: absolute;background-color: rgb(237, 235, 211);top: 20px;left: 30px;width: 800px;border-radius: 16px;padding: 14px;cursor: pointer;  overflow-y: auto;">
+        <div style="display: flex; justify-content: center; align-items: center;gap: 10px;">
+            <div style="text-align: center;">
+                <p style="text-align: center;"><b>Modelo de receituário para tintura (manipulação)</b>.</p>
+                <!-- <img src="recursos/imgs/DAF_FITO_M1A2_RIM_Tab10.png" style="width: 500px;"> -->
+                <table style="width:100%; border-collapse: collapse; font-family: Arial, sans-serif;">
+                    <thead style="background-color: #68714b; color: white;">
+                        <tr>
+                            <th style="padding: 8px; border: 1px solid #68714b;">Elemento</th>
+                            <th style="padding: 8px; border: 1px solid #68714b;">Exemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Identificação</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">
+                                Nome do paciente: _____________________________________<br>
+                                Idade: ___________________ - Peso: ____________________
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Via</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Uso oral</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Nome científico, nome popular, parte
+                                utilizada, padronização, e dose unitária</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">
+                                Tintura de <i>Plectranthus barbatus</i> (Boldo nacional), folha, 1:10 ãã*<br>
+                                Tintura de <i>Achillea millefolium</i> (Mil folhas), partes aéreas, 1:10 ãã*
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Posologia</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">
+                                Tomar 2 mL diluídos em 1 copo com água, três vezes ao dia.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Duração do tratamento e forma
+                                farmacêutica</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">
+                                Preparar 120 mL de tintura para 30 dias.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Data da prescrição</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">dd/mm/aaaa</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Profissional</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">
+                                Assinatura e carimbo do profissional de saúde com nº do registro no conselho
+                                profissional.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    * O símbolo ãã significa em partes iguais (do latim <i>ana partes aequales</i>), ou seja, os
+                    componentes da
+                    fórmula estão na mesma
+                    quantidade. Neste exemplo, a fórmula contém 60 mL de tintura de <i>Plectranthus barbatus</i> e 60 mL
+                    de tintura de <i>Achillea millefolium</i>.
+                </p>
+            </div>
+        </div>
+        <!-- <div class="caixa-seta">
+            <div class="seta-esquerda"></div>
+            <div class="conteudo">
+                <p>Tintura de <em>Plectranthus barbatus</em> (Boldo nacional), folha, 1:10 ãã*</p>
+                <p>Tintura de <em>Achillea millefolium</em> (Mil-folhas), partes aéreas, 1:10 ãã*</p>
+            </div>
+        </div> -->
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+    <div id="janela_2"
+        style="display: flex; position: absolute;background-color: rgb(237, 235, 211);top: 20px;left: 30px;width: 800px;border-radius: 16px;padding: 14px;cursor: pointer;  overflow-y: auto;">
+
+        <div style="display: flex; justify-content: center; align-items: center;gap: 10px;">
+
+            <div style="text-align: center;">
+                <p style="text-align: center;"><b>Modelo de receituário para creme (manipulação)</b>.</p>
+                <!-- <img src="recursos/imgs/DAF_FITO_M1A2_RIM_Tab11.png" style="width: 420px;"> -->
+                <table style="width:100%; border-collapse: collapse; font-family: Arial, sans-serif;">
+                    <thead style="background-color: #68714b; color: white;">
+                        <tr>
+                            <th style="padding: 8px; border: 1px solid #68714b;">Elemento</th>
+                            <th style="padding: 8px; border: 1px solid #68714b;">Exemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Identificação</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">
+                                Nome do paciente: _____________________________________<br>
+                                Idade: ___________________ - Peso: ____________________
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Via</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Uso tópico</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Nome científico, nome popular, parte
+                                utilizada, padronização e dose unitária</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">
+                                Tintura de <i>Calendula officinalis</i> (Calêndula), flor, 1:10 – 10%* <br>
+                                Creme base q.s.p. 100 g**
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Posologia</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">
+                                Aplicar na área afetada, duas a quatro vezes ao dia
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Duração do tratamento e forma
+                                farmacêutica</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">
+                                Preparar um frasco com 100 g.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Data da prescrição</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">dd/mm/aaaa</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Profissional</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">
+                                Assinatura e carimbo do profissional de saúde com nº do registro no conselho
+                                profissional.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>* Este creme contém 10 mL de tintura de <i>Calendula officinalis</i> (que é 10 % do volume final) e
+                    aproximadamente 90 g de base creme, que é a quantidade suficiente para atingir o volume final de 100
+                    g.</p>
+                <p>** A sigla q.s.p. significa “quantidade suficiente para”. Utilizado para indicar a quantidade de
+                    veículo e/ou excipiente para atingir o volume final da formulação.</p>
+            </div>
+        </div>
+
+        <!-- <div class="caixa-seta">
+            <div class="seta-esquerda"></div>
+            <div class="conteudo">
+                <p>Tintura de <em>Calendula officinalis</em> (Calêndula), flor, 1:10 - 10%*</p>
+                <p>Creme base q.s.p. 100 g**</p>
+            </div>
+        </div> -->
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+    <div id="janela_3"
+        style="display: flex; position: absolute;background-color: rgb(237, 235, 211);top: 85px;left: 30px;width: 800px;border-radius: 16px;padding: 14px;cursor: pointer;  overflow-y: auto;">
+
+        <div style="display: flex; justify-content: center; align-items: center;gap: 10px;">
+
+            <div style="text-align: center;">
+                <p style="text-align: center;"><b>Modelo de receituário para cápsulas (manipulação)</b>.</p>
+                <!-- <img src="recursos/imgs/DAF_FITO_M1A2_RIM_Tab11.png" style="width: 420px;"> -->
+                <table style="width:100%; border-collapse: collapse; font-family: Arial, sans-serif;">
+                    <thead style="background-color: #68714b; color: white;">
+                        <tr>
+                            <th style="padding: 8px; border: 1px solid #68714b;">Elemento</th>
+                            <th style="padding: 8px; border: 1px solid #68714b;">Informações em bula</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Identificação</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">
+                                Nome do paciente: _____________________________________<br>
+                                Idade: ___________________ - Peso: ____________________
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Via</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Uso oral</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Nome científico, nome popular, parte
+                                utilizada, padronização e dose unitária</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">
+                                <i>Panax ginseng</i> (Ginseng), raiz – extrato seco com 10% de ginsenosídeos – 160
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Posologia</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">
+                                Tomar 1 dose ao dia, pela manhã.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Duração do tratamento e forma
+                                farmacêutica</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">
+                                Preparar 30 doses sob a forma de cápsulas ou <br>Preparar para 30 dias de tratamento,
+                                sob a forma de cápsulas.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Data da prescrição</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">dd/mm/aaaa</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #68714b;">Profissional</td>
+                            <td style="padding: 8px; border: 1px solid #68714b;">
+                                Assinatura e carimbo do profissional de saúde com nº do registro no conselho
+                                profissional.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <!-- <div class="caixa-seta">
+            <div class="seta-esquerda"></div>
+            <div class="conteudo">
+                <p>Tintura de <em>Calendula officinalis</em> (Calêndula), flor, 1:10 - 10%*</p>
+                <p>Creme base q.s.p. 100 g**</p>
+            </div>
+        </div> -->
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+
+    })
+</script>

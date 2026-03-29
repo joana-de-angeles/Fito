@@ -1,0 +1,143 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M4A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div class="coluna-esquerda largura-1_1"
+    style="display: flex;justify-content: center;align-items: center;/* height: 380px; */flex-direction: column;">
+    <div style="width: 86%;">
+        <h1>PRINCIPAIS CONDIÇÕES QUE AFETAM O SISTEMA NERVOSO</h1>
+        <p>Inicialmente, optamos por utilizar o termo condições para abranger síndromes, doenças, transtornos e
+            distúrbios.</p>
+        <div
+            style="display: inline-flex;margin-top: 120px;margin-left: -20px;position: absolute;width: 780px;justify-content: space-between;position: absolute;">
+            <img id="volta"
+                style="width: 0px; height: 0px; border-top: 25px solid transparent; border-bottom: 25px solid transparent; border-right: 25px solid rgb(205, 164, 94); opacity: 0.6;">
+            <img id="avanca"
+                style="width: 0px; height: 0px; border-top: 25px solid transparent; border-bottom: 25px solid transparent; border-left: 25px solid rgb(205, 164, 94); opacity: 1;">
+        </div>
+        <div
+            style="background-color: #edebd3;width: 703px;height: 200px;padding: 20px;border-radius: 20px;margin-top: 35px;">
+            <div id="janela_1">
+                <div style="display: flex; align-items: center; justify-content: space-around; height: 200px;">
+                    <p><b>Síndrome</b> (do grego <i>syndromos</i> – andar junto) é um conjunto de
+                        sintomas e/ou
+                        sinais que ocorre associadamente e que podem ter diferentes causas. Exemplos: síndrome febril
+                        (hipertermia, taquicardia, taquisfigmia, sudorese, tremores, mialgias, artralgias), podendo se
+                        relacionar com infecções bacterianas, virais, fúngicas, neoplasias malignas. Outros exemplos:
+                        síndrome diarreica, síndrome dolorosa, síndrome consumptiva. Embora se possa identificar e
+                        tratar
+                        os sintomas associados a uma síndrome, a causa subjacente não é necessariamente conhecida. As
+                        síndromes são muitas vezes utilizadas para descrever condições complexas que não se encaixam em
+                        categorias tradicionais de doenças ou transtornos.</p>
+                </div>
+            </div>
+            <div id="janela_2">
+                <div style="display: flex; align-items: center; justify-content: space-around; height: 200px;">
+                    <p><b>Doença</b> é uma condição de saúde (entidade nosológica) bem definida,
+                        com alteração de função de órgãos ou sistemas, ou mesmo perda dessas funções com suas
+                        consequências e repercussões.</p>
+                </div>
+            </div>
+            <div id="janela_3">
+                <div style="display: flex; align-items: center; justify-content: space-around; height: 200px;">
+                    <p><b>Transtorno</b> é uma condição que envolve alterações no funcionamento
+                        normal <b>do corpo ou dos processos mentais</b>. Eles são caracterizados por uma série de
+                        sintomas que causam sofrimento e disfunção, mas cuja causa não está bem estabelecida. Por
+                        exemplo, a esquizofrenia é um transtorno mental multifacetado e complexo que afeta o pensamento,
+                        a emoção e o comportamento, de causa não totalmente esclarecida. </p>
+                </div>
+            </div>
+            <div id="janela_4">
+                <div style="display: flex; align-items: center; justify-content: space-around; height: 200px;">
+                    <p><b>Distúrbio</b> é uma disfunção ou anomalia que pode afetar a <b>saúde
+                            mental ou física</b> de um indivíduo. É uma <b>perturbação no funcionamento normal</b>. Pode
+                        abranger muitas condições que causam desconforto ou interferem no bem-estar geral. Exemplo:
+                        distúrbios de deglutição.</p>
+                </div>
+            </div>
+            <div id="janela_5">
+                <div style="display: flex; align-items: center; justify-content: space-around; height: 200px;">
+                    <p>As condições que afetam o sistema nervoso podem ser didaticamente divididas
+                        em <b>neurológicas e psiquiátricas</b>, quando afetam, respectivamente, o sistema nervoso
+                        central e/ou periférico, ou os processos mentais. Entretanto, essa divisão vem progressivamente
+                        sendo substituída por uma compreensão mais abrangente dos processos de adoecimento corpo-mente.
+                        A neuropsiquiatria, a neuropsicologia e a psicopatologia são ciências que atualmente buscam
+                        investigar as correspondências entre as regiões cerebrais e as funções cognitivas com os
+                        transtornos já estabelecidos ou conhecidos. Nas últimas três décadas, assistimos a uma investida
+                        das tecnologias de neuroimagem (ressonância magnética e tomografia por emissão de pósitrons),
+                        além dos rápidos avanços da genômica e epigenômica. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M4A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]');
+        let avanca = $(document).find('[id^=avanca]').css('cursor', 'pointer').on('click', avancar);
+        let volta = $(document).find('[id^=volta]').css('cursor', 'pointer').on('click', voltar);
+        let contador = 1;
+        $(volta).css('opacity', '0.6');
+
+        apagarJanelas();
+        $(document).find('[id^=janela_1]').show();
+
+        function avancar() {
+            if (contador < janelas.length) {
+                apagarJanelas();
+                contador++;
+                $(document).find(`[id^=janela_${contador}]`).show();
+            }
+            mudarBotoes();
+        }
+
+        function voltar() {
+            if (contador > 1) {
+                apagarJanelas();
+                contador--;
+                $(document).find(`[id^=janela_${contador}]`).show();
+            }
+            mudarBotoes();
+        }
+
+        function mudarBotoes() {
+            if (contador == 1) {
+                $(volta).css('opacity', '0.6');
+                $(avanca).css('opacity', '1');
+            }
+            if (contador == janelas.length) {
+                $(volta).css('opacity', '1');
+                $(avanca).css('opacity', '0.6');
+            }
+            if (contador > 1 && contador < janelas.length) {
+                $(volta).css('opacity', '1');
+                $(avanca).css('opacity', '1');
+            }
+        }
+
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                mudarBotao(index + 1)
+                $(janelas[index + 1]).show();
+            })
+        })
+
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+
+        let conteudo = $('#conteudo').hide();
+        $('#hotWord-bt').hover(() => {
+            conteudo.fadeIn()
+        })
+        $('#hotWord-bt').mouseout(() => {
+            conteudo.fadeOut()
+        })
+    })
+</script>

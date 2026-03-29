@@ -1,0 +1,79 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div class="coluna-esquerda largura-1_1"
+    style="display: flex;justify-content: center;align-items: center; height: 320px;flex-direction: column;">
+    <div style="display: flex;height: 380px;align-items: center;justify-content: space-around;flex-direction: column;">
+        <div style="display: flex;align-items: center;width: 800px;justify-content: space-around;">
+            <div class="animate__animated animate__backInLeft">
+                <img src="recursos/imgs/DAF_FITO_M2A2_RIM_ilustra19.svg" style="width: 340px;">
+            </div>
+            <div style="width: 400px;">
+                <p>Outro tipo de diarreia é a funcional, definida pelo ROME IV como fezes amolecidas ou líquidas,
+                    sem
+                    dor abdominal predominante ou inchaço incômodo, ocorrendo em mais de 25% das fezes, excluindo-se
+                    aqueles com diagnóstico de síndrome do intestino irritável de forma diarreica. Os critérios
+                    devem
+                    ter sido preenchidos nos últimos três meses, com início dos sintomas pelo menos seis meses antes
+                    do
+                    diagnóstico. </p>
+                <p>A diarreia funcional é o resultado de distúrbios no transporte intestinal de água e eletrólitos.
+                    Pode
+                    ser causada pela sobrecarga osmótica no lúmen intestinal, com a consequente retenção de água e
+                    eletrólitos ou uma secreção excessiva de água e eletrólitos, causando um aumento na motilidade
+                    intestinal. O diagnóstico de diarreia funcional ocorre com essa alteração de caráter crônico.
+                </p>
+                <div id="botao_1"
+                    style="display: flex; align-items: center; position: relative; justify-content: center; margin-top: 60px; cursor: pointer;">
+                    <img src="recursos/icones/DAF_FITO_M1A1_RIM_prancheta.svg"
+                        style="width: 63px;position: absolute;right: 50px;cursor: pointer;">
+                    <div
+                        style="background: #EDEBD3 0% 0% no-repeat padding-box;border-radius: 24px;padding: 7px 20px;width: 301px;">
+                        <p style="font-size: 10px;"><b>Clique</b> na prancheta e veja os tipos de tratamentos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan" style="cursor: pointer; display: none;">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 30px;display: flex;flex-direction: column;justify-content: center;width: 530px;align-items: center;">
+        <div>
+            <p><b>Tratamento</b></p>
+            <p>O tratamento envolve plano alimentar adequado e aumento da hidratação.</p>
+            <p><b>Tratamento fitoterápico</b></p>
+            <p>Alguns fitoterápicos são antidiarreicos, antibacterianos, antimicrobianos e carminativos,
+                podendo ser
+                indicados para o tratamento da diarreia:</p>
+            <ul>
+                <li><i>Psidium guajava</i> (Myrtaceae) (goiabeira).</li>
+                <li><i>Matricaria chamomilla</i> (Asteraceae) (camomila).</li>
+                <li><i>Mentha × piperita</i> (Lamiaceae) (hortelã-pimenta).</li>
+            </ul>
+        </div>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

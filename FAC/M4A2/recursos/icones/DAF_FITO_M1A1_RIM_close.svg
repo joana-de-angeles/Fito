@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+	<title>Captura de Tela 2023-09-20 às 18</title>
+	<defs>
+		<image  width="48" height="48" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAAXNSR0IB2cksfwAAAPxQTFRF7OvT4eLHzNGvucGZqrSInKl4l6RxlKJu5eXLxcqmpK+ApK+Bxcun4OHFuMCX4OHG6ejQwcehlqRxwcii6enQ3d7Bo6+A3d7CzNCuxsyox8ypwceiwsijoKx/zdO7zdS8mqd3t8CdtsCdx86z/v7+////ydC2s72Z+fr3sryWucCYoq6BytG4tL6a/P38+fr4m6h30NfAuMGexsun0dfBuMKgpLCBpLCE+vv5nKl5ztS9/f39zdGw0Na//f79q7WInal4mKVylaJv/v79m6h4z9W+pbCBucKgoq6Ctb+b+/v5y9K5usOinap6pbGF09jD0tjD3d/CzdGvuMCY+01iNgAAAFR0Uk5TAAD///////8A/////wD/AAD///8AIP8Q////////////////////////////////////////////////////////////////////////////EP//F6uBcgAAAflJREFUeJyVlmdDwjAQhtMWGiyIiANU3A3uAThAUYYbcf///2IDNHcZLXDfrn3eNrmVEKKaZTuJpEupm0w4tqW9Viw141HJ0plUDD6bdalmbnYuAs/N53WcW35h0cQvLZtxbssFnS9GfH70E1vlV+JwbqtT8oqiOJ6nFK1qKXb9obli57mY+GDzwuiuTcZTWhrlFy1ofWNzHSNb2ztb4OWHOc/Ck12fMb8M/t4+Y/sH4B9yPgX1cxTwgeI49E9OuX92LgCXV+IMfKDCGFYMecaqQNQCAarnC4YVIc8ugbgK+gVt8dpHCsHXGwixiI2DcgMKwd/uYKJJHOzSO6G4D/mqBDgkQc0KM09bJEnjFCpP20TrYqzQeNoh6hOs8DWedg2CkwchODYItCWJeBoVHW3TmDco2mpYZV5XtJTECd73zQpHLo09UQ9VyHkZE02p+B7PUPxBcYSQYJynwbuU8iUUT0A8B/2QAfdFzm+oqABRk1u0UZfrYajwXwUwaFE8BN56jPVQ/fP+8N/BHwwBMofGTKPf/8BB+fz6vgZvNGamHmRkcdpRSQqTDeOfKcf9Lz4gVsfzyhE0VqHwhNiGIxqt/1flg5170bz3o/NBdBeiDvaS8WDnOf8zXR0Oo64O3FK1Kxl/rsVdTgZmNZ1Wu9Ptdtotp6lff/4BrNdy6yCv6lgAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+</svg>

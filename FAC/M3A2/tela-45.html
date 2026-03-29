@@ -1,0 +1,105 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M3A3_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div class="coluna-esquerda largura-1_1"
+    style="display: flex;justify-content: center;align-items: center;height: 350px;flex-direction: column;">
+    <div style="width: 84%;">
+        <h1>OUTRAS DOENÇAS INFLAMATÓRIAS</h1>
+        <p>Como salientado anteriormente, a inflamação é uma das reações mais primordiais do organismo humano e está
+            presente em quase todas as doenças, em menor ou maior grau de intensidade. Entretanto,
+            existem
+            aquelas em que o componente inflamatório representa um dos fatores críticos ou é o principal elemento de
+            perpetuação da doença e/ou de lesão tecidual e comprometimento da saúde dos pacientes. Nesses casos,
+            combinar, na terapêutica, medicamentos que controlem o processo inflamatório é medida fundamental para o
+            sucesso do tratamento. </p>
+        <p><b>Clique</b> em cada um dos títulos.</p>
+        <div class="animate__animated animate__backInRight" style="display: flex;gap: 20px;justify-content: center;">
+            <div id="botao_1" style="cursor: pointer;">
+                <img src="recursos/imgs/DAF_FITO_M3A2_RIM_ilustra25.svg" style="width: 200px;">
+            </div>
+            <div id="botao_2" style="cursor: pointer;">
+                <img src="recursos/imgs/DAF_FITO_M3A2_RIM_ilustra26.svg" style="width: 200px;">
+            </div>
+            <div id="botao_3" style="cursor: pointer;">
+                <img src="recursos/imgs/DAF_FITO_M3A2_RIM_ilustra27.svg" style="width: 200px;">
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M3A3_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan" style="cursor: pointer; display: none;">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 30px;display: flex;flex-direction: column;justify-content: center;width: 530px;align-items: center;">
+        <div>
+            <p><b>Sistema respiratório</b></p>
+            <p>Inflamação brônquica. A inflamação nos brônquios é um fator comum a diversas doenças respiratórias,
+                tais
+                como asma, bronquite crônica e bronquiectasias. O processo inflamatório faz os músculos
+                peribrônquicos
+                se contraírem (asma), tornam a mucosa brônquica mais espessa (bronquite) e acabam destruindo os
+                anéis
+                cartilaginosos da árvore brônquica (bronquiectasias). </p>
+        </div>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<div id="janela_2" class="jan" style="cursor: pointer; display: none;">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 30px;display: flex;flex-direction: column;justify-content: center;width: 530px;align-items: center;">
+        <div>
+            <p><b>Sistema circulatório</b></p>
+            <p>Inflamação vascular. É relativamente recente a constatação de que mecanismos inflamatórios têm grande
+                importância na gênese e na evolução da aterosclerose. Também é sabido que moléculas naturais,
+                originárias de plantas, desempenham importante atividade em mitigar os danos
+                observados
+                nas placas de ateroma na parede de artérias. Por fim, o papel das plaquetas, cuja ativação e
+                aderência
+                às placas ulceradas é que acabam gerando as obstruções mais graves, colocando essa doença entre
+                aquelas
+                com grande potencial para os fitoterápicos.</p>
+        </div>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<div id="janela_3" class="jan" style="cursor: pointer; display: none;">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 30px;display: flex;flex-direction: column;justify-content: center;width: 530px;align-items: center;">
+        <div>
+            <p><b>Sistema digestório</b></p>
+            <p>Inflamação intestinal. Ganha também importância a inflamação crônica em muitos problemas do sistema
+                digestório, que vão desde câncer até problemas de menor gravidade, como dispepsias inespecíficas,
+                gastrite
+                crônica e síndrome do intestino permeável. Crescem as evidências
+                de
+                que substâncias de origem vegetal podem controlar a inflamação do tubo digestivo.</p>
+        </div>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').click(apagarJanelas);
+        // let check = $(document).find('[id^=check]').hide();
+        apagarJanelas();
+
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+                // $(check[index]).fadeIn();
+                // $(botao).css({ 'opacity': '1', 'border': '5px solid #edebd3' });
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

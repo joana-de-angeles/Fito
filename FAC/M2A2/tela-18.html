@@ -1,0 +1,81 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+    <div style="width: 73%;">
+        <p>O diagnóstico de doença péptica geralmente envolve uma combinação de histórico médico, exame físico,
+            testes
+            laboratoriais, detecção de <i>H. pylori</i>, pHmetria e, em alguns casos, procedimentos endoscópicos.</p>
+        <div style="display: flex;justify-content: space-between;">
+            <div class="animate__animated animate__backInLeft">
+                <img src="recursos/imgs/DAF_FITO_M2A2_RIM_ilustra09.svg " style="width: 250px;">
+            </div>
+            <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                <img id="botao_1" src="recursos/icones/DAF_FITO_M1A1_RIM_prancheta.svg"
+                    style="width: 109px; margin-bottom: 16px; cursor: pointer;">
+                <div style="background: #EDEBD3 0% 0% no-repeat padding-box;border-radius: 24px;padding: 6px 13px;">
+                    <p><b>Clique</b> na prancheta e veja os tipos de tratamentos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0; ">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan" style="cursor: pointer; display: none;">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 30px;display: flex;flex-direction: column;justify-content: center;width: 530px;align-items: center;">
+        <div>
+            <p><b>Tratamento</b> </p>
+            <p>O tratamento pode envolver mudanças na dieta e no estilo de vida, medicamentos para reduzir a
+                produção de
+                ácido gástrico, antibióticos para erradicar o <i>H. pylori</i> e, em casos mais graves, procedimentos
+                endoscópicos para controlar a hemorragia ou tratar úlceras complicadas.</p>
+            <p><b>Tratamento fitoterápico</b> </p>
+            <p>Os principais mecanismos pelos quais os medicamentos fitoterápicos exercem sua ação terapêutica em
+                pacientes com dispepsia ou doença péptica são:</p>
+            <ul>
+                <li>(a) atividade anti-secretória</li>
+                <li>(b) atividade citoprotetora</li>
+                <li>(c) atividade antioxidante</li>
+                <li>(d) atividade antimicrobiana contra a <i>H. pylori</i></li>
+                <li>(e) outros mecanismos regulados pelo óxido nítrico, prostaglandinas, moléculas sulfidrílicas não
+                    proteicas e expressão de fator de crescimento epidérmico</li>
+            </ul>
+            <!-- <p>Algumas plantas medicinais podem ser utilizadas no tratamento da doença péptica devido à sua
+                atividade
+                gastroprotetora, hipossecretora, antiulcerogênica, antibacteriana e eupéptica.</p>
+            <p>Exemplos de plantas medicinais indicadas na doença péptica (gastrite e úlcera gástrica)</p>
+            <ul>
+                <li><i>Monteverdia ilicifolia (Celastraceae)</i> (espinheira-santa)</li>
+                <li><i>Casearia sylvestris (Salicaceae)</i> (guaçatonga)</li>
+                <li><i>Plectranthus barbatus (Lamiaceae)</i> (boldo nacional)</li>
+            </ul> -->
+        </div>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').click(apagarJanelas);
+        // let check = $(document).find('[id^=check]').hide();
+        apagarJanelas();
+
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+                // $(check[index]).fadeIn();
+                // $(botao).css({ 'opacity': '1', 'border': '5px solid #edebd3' });
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

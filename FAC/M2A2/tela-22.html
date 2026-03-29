@@ -1,0 +1,77 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div class="coluna-esquerda largura-1_1"
+    style="display: flex;justify-content: center;align-items: center;height: 340px;flex-direction: column;">
+    <div style="width: 77%;">
+        <p style="margin: 0 auto;">Os principais sintomas da doença do refluxo gastroesofágico são:</p>
+        <div class="animate__animated animate__backInLeft"
+            style="display: flex;align-items: center;justify-content: space-around;/* margin: 20px auto; */">
+            <img src="recursos/imgs/DAF_FITO_M2A2_RIM_ilustra12.svg" style="width: 630px;">
+        </div>
+        <div id="botao_1"
+            style="display: flex; align-items: center; position: relative; justify-content: center; cursor: pointer;">
+            <img src="recursos/icones/DAF_FITO_M1A1_RIM_prancheta.svg"
+                style="width: 63px;position: absolute;right: 190px;cursor: pointer;">
+            <div
+                style="background: #EDEBD3 0% 0% no-repeat padding-box;border-radius: 24px;padding: 7px 20px;width: 301px;">
+                <p style="font-size: 10px;"><b>Clique</b> na prancheta e veja os tipos de tratamentos.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan" style="cursor: pointer; display: none;">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 30px;display: flex;flex-direction: column;justify-content: center;width: 530px;align-items: center;">
+        <div>
+            <p><b>Tratamento</b> </p>
+            <p>O tratamento da DRGE envolve mudanças nos hábitos de vida e de alimentação, incluindo perda de
+                peso,
+                uso
+                de antiácidos, erradicação de <i>H. pylori</i>, uso de medicamentos procinéticos e, em alguns casos,
+                cirurgia.
+            </p>
+            <p><b>Tratamento fitoterápico</b> </p>
+            <p>Algumas plantas medicinais podem ser utilizadas no tratamento da DRGE devido à sua atividade
+                procinética,
+                gastroprotetora, antiespasmódica e eupéptica. Exemplos de plantas medicinais indicadas na doença
+                do
+                refluxo gastroesofágico:</p>
+            <ul>
+                <li><i>Monteverdia ilicifolia (Celastraceae)</i> (espinheira-santa)</li>
+                <li><i>Achyrocline satureioides (Asteraceae)</i> (macela)</li>
+                <li><i>Zingiber officinale (Zingiberaceae)</i> (gengibre)</li>
+                <li><i>Foeniculum vulgare (Apiaceae)</i> (funcho)</li>
+                <li><i>Achillea millefolium (Asteraceae)</i> (mil-folhas)</li>
+            </ul>
+            <p>Algumas plantas devem ser evitadas, porque podem relaxar o esfíncter esofágico inferior, tais
+                como
+                <i>Mentha</i> spp. (as mentas e hortelãs em geral) e <i>Rosmarinus officinalis</i> (alecrim).
+            </p>
+        </div>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').click(apagarJanelas);
+        apagarJanelas();
+
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

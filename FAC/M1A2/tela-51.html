@@ -1,0 +1,117 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div>
+    <div style="display: flex;align-items: center;height: 320px;justify-content: center;">
+        <div style="width: 460px;">
+            <h1>Receituário fitoterápico</h1>
+            <p style="margin-top: 20px;">
+                A qualidade da receita emitida pelo profissional de saúde determina diretamente a adesão ao tratamento e
+                o resultado clínico. No caso das preparações magistrais, isto é ainda mais crítico. <b>Clique</b> nos
+                ícones destacados e veja o que deve e o que não deve conter no receituário.
+            </p>
+        </div>
+        <div class="animate__animated animate__backInRight">
+            <img src="recursos/imgs/DAF_FITO_M1A2_RIM_ilustra36.svg " style="width: 300px;margin-right: -2px;">
+        </div>
+        <div>
+            <div id="botao_1" style="position: absolute; width: 55px;height: 55px;top: 159px;right: 271px;"></div>
+            <div id="botao_2" style="position: absolute; width: 55px;height: 55px;top: 195px;right: 101px;"></div>
+        </div>
+
+        <div id="janela_1"
+            style="position: absolute;background-color: rgb(237, 235, 211);top: 114px;left: 54px;width: 760px;border-radius: 16px;padding: 14px;cursor: pointer;  overflow-y: auto;">
+            <div>
+                <p>
+                    O medicamento magistral é preparado a partir das informações contidas no receituário prescrito pelo
+                    profissional de saúde habilitado e deve conter:
+                </p>
+                <div style="display: flex; justify-content: center; align-items: center;gap: 10px;">
+                    <div>
+                        <img src="recursos/icones/DAF_FITO_M1A2_RIM_check_certo.svg" style="width: 35px;">
+                    </div>
+                    <div>
+                        <p>
+                            • Nome do paciente; <br>
+                            • Uso (interno ou externo);<br>
+                            • Nome botânico ou científico da planta medicinal seguido da parte utilizada; <br>
+                            • Nome popular da planta (preferencialmente usado na região onde o paciente reside);<br>
+                            • Estado da droga vegetal (pulverizada ou rasurada) ou do derivado vegetal (extrato seco,
+                            tintura etc.); <br>
+                            • Padronização do extrato (faixa de conteúdo e o marcador ativo) ou relação droga: extrato
+                            (RDE) (5:1, 3:1 etc.); <br>
+                            • Forma farmacêutica (cápsula, sachê etc.); <br>
+                            • Dose com unidade de medida (mg, g, mL etc.); <br>
+                            • Posologia; <br>
+                            • Quantidade, volume; <br>
+                            • Tempo de tratamento; <br>
+                            • Pode-se incluir alertas do tipo “esta receita não deve ser repetida”, como uma forma do
+                            prescritor se resguardar de que é necessária nova avaliação do paciente e nova prescrição
+                            para a continuidade do cuidado com o fitoterápico; <br>
+                            • Data e assinatura do profissional de saúde com seu respectivo registro no conselho
+                            profissional.
+
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+                style="position: absolute;top: 9px;right: 7px;width: 20px;">
+        </div>
+
+        <div id="janela_2"
+            style="position: absolute;background-color: rgb(237, 235, 211);top: 175px;left: 285px;width: 289px;border-radius: 16px;padding: 14px;cursor: pointer;  overflow-y: auto;">
+            <div>
+                <p>
+                    O que não pode conter no receituário:
+                </p>
+                <div style="display: flex; justify-content: center; align-items: center;gap: 10px;">
+                    <div>
+                        <img src="recursos/icones/DAF_FITO_M1A2_RIM_check_errado.svg" style="width: 35px;">
+                    </div>
+                    <div>
+                        <p>
+                            • Ilegibilidade;<br>
+                            • Emendas;<br>
+                            • Rasuras;<br>
+                            • Códigos;<br>
+                            • Denominações diferentes daquelas descritas em Guias Fitoterápicos, Formulários e
+                            Farmacopeias reconhecidas pela Anvisa;<br>
+                            • Falta de informação ou dados inconsistentes;<br>
+                            • Propagandas.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+                style="position: absolute;top: 9px;right: 7px;width: 20px;">
+        </div>
+
+
+    </div>
+</div>
+</div>
+<footer style="padding: 0; ">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+
+    })
+</script>

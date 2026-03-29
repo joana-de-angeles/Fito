@@ -1,0 +1,106 @@
+<div class="largura-1_1">
+	<img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div style="display: flex;align-items: center;justify-content: space-evenly; margin-top: -30px;">
+	<div class="animate__animated animate__backInLeft"
+		style="width: 80%;display: flex;flex-direction: column;align-items: center;justify-content: center;height: 380px;">
+		<p>No caso dos fitoterápicos, as formas farmacêuticas são de uso oral ou tópico e podem ser caracterizadas como
+			preparações magistrais, oficinais e fitoterápicos industrializados.</p>
+		<div style="display: flex;justify-content: space-around;width: 662px;">
+			<div id="botao_1"
+				style="width: 174px;height: 33px;background: #C8BBA5 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center; border-radius: 5px 5px 0 0;">
+				<p style="padding: 10px;"><b>Preparação ou medicamento magistral</b></p>
+			</div>
+			<div id="botao_2"
+				style="width: 174px;height: 33px;background: #C8BBA5 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center; border-radius: 5px 5px 0 0;">
+				<p style="padding: 10px;"><b>Preparação ou medicamento oficinal ou farmacopeico</b></p>
+			</div>
+			<div id="botao_3"
+				style="width: 174px;height: 33px;background: #C8BBA5 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center; border-radius: 5px 5px 0 0;">
+				<p><b>Fitoterápico industrializado</b></p>
+			</div>
+		</div>
+		<div
+			style="width: 662px;height: 278px;background: #EDEBD3 0% 0% no-repeat padding-box;border-radius: 18px;display: flex;align-items: center;justify-content: center;">
+			<div id="instru" style="width: 470px;">
+				<p>
+					<b>Clique</b> em cada um dos conceitos de preparações e produtos farmacêuticos fitoterápicos.
+				</p>
+			</div>
+			<div id="janela_1" style="width: 430px;">
+				<p>
+					É todo medicamento cuja prescrição pormenoriza a composição, a forma farmacêutica e a posologia. É
+					preparado na farmácia por um profissional farmacêutico habilitado ou sob sua supervisão direta em
+					que está estabelecida a relação prescritor-farmacêutico-usuário e destinado a um paciente
+					individualizado.
+				</p>
+			</div>
+			<div id="janela_2"
+				style="display: flex; flex-direction: column; justify-content: center; align-items: center; cursor: pointer;">
+				<p style="width: 440px;">
+					É aquela preparada na farmácia regularizada cuja fórmula esteja inscrita no <a
+						href="recursos/arquivos/DAF_FITO_M1_A2_formulario.pdf" target="_blank">Formulário de
+						Fitoterápicos da Farmacopeia Brasileira</a> ou em outros compêndios/documentos reconhecidos pela
+					Anvisa (Brasil, 2021). Preparações oficinais podem já estar previamente preparadas, em estoque
+					mínimo, nas farmácias, para dispensação imediata. O <a
+						href="recursos/arquivos/DAF_FITO_M1_A2_formulario2.pdf" target="_blank">Formulário Nacional da
+						Farmacopeia Brasileira</a> substitui o termo oficinal por farmacopeico, com significado
+					equivalente: “medicamento ou método cujo modo de preparação ou elaboração está indicado nas
+					Farmacopeias”.
+				</p>
+
+			</div>
+			<div id="janela_3" style="width: 570px;">
+				<p>
+					Os fitoterápicos industrializados possuem duas categorias: <b>medicamentos fitoterápicos</b> e
+					<b>medicamentos tradicionais fitoterápicos</b>:
+				</p>
+
+				<p style="margin-left: 40px;"> •
+					<b>Medicamentos fitoterápicos (MF)</b> são aqueles obtidos exclusivamente a partir de
+					matérias-primas ativas vegetais com segurança e eficácia fundamentadas em evidências clínicas e que
+					sejam caracterizados pela constância de sua qualidade.
+				</p>
+				<p style="margin-left: 40px;">
+					• <b>Medicamentos tradicionais fitoterápicos (MTF)</b> são aqueles obtidos exclusivamente a partir
+					de matérias-primas ativas vegetais com segurança e efetividade fundamentadas em dados
+					técnico-científicos, desenvolvidos para utilização sem necessidade de diagnóstico, prescrição e
+					acompanhamento realizados por médico e que sejam caracterizados pela constância de sua qualidade.
+				</p>
+
+			</div>
+		</div>
+		<p style="font-size: 10px; margin-left: 22px;">
+			Fonte: Brasil (2012, 2014c, 2021).
+		</p>
+	</div>
+
+</div>
+<footer style="padding: 0; ">
+	<img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<script>
+	$(() => {
+		let janelas = $(document).find('[id^=janela]');//.css('cursor', 'pointer');
+		apagarJanelas();
+		// $('#botao_1').css('background', '#EDEBD3');
+		$(document).find('#instru').show();
+		let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+			$(botao).click(() => {
+				$(document).find('#instru').hide();
+				$(document).find('[id^=botao]').map((i, obj) => {
+					$(obj).css('background', '#C8BBA5');
+				})
+				$(botao).css('background', '#EDEBD3');
+				apagarJanelas();
+				$(janelas[index]).fadeIn();
+			})
+		})
+		function apagarJanelas() {
+			janelas.map((index, janela) => {
+				$(janela).hide();
+			})
+		}
+	})
+</script>

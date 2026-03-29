@@ -1,0 +1,121 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M4A3_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div>
+    <div style="display: flex;align-items: center;height: 350px;justify-content: space-evenly;">
+        <div style="width: 86%;">
+            <h1>DISFUNÇÃO ERÉTIL</h1>
+            <p>A disfunção erétil pode ser definida como a incapacidade de alcançar ou manter uma ereção satisfatória.
+                Pode estar associada a fatores vasculares, metabólicos, neurológicos, hormonais e psicológicos.</p>
+            <div
+                style="display: flex;justify-content: center;align-items: center;flex-direction: column;margin-top: 30px;">
+                <div style="display: flex;justify-content: center;align-items: flex-start;gap: 9px;">
+                    <div id="botao_1"
+                        style="border-radius: 13px; background-color: rgb(237, 235, 211); width: 166px; height: 35px; padding: 1px 0px; ">
+                        <p style="font-weight: bold; color: #3B3D35; text-align: center;">Causa vascular</p>
+                    </div>
+                    <div id="botao_2"
+                        style="border-radius: 13px; background-color: rgb(237, 235, 211); width: 166px; height: 35px; padding: 1px 0px; ">
+                        <p style="font-weight: bold; color: #3B3D35; text-align: center;">Disfunção endotelial</p>
+                    </div>
+                    <div id="botao_3"
+                        style="border-radius: 13px; background-color: rgb(237, 235, 211); width: 166px; height: 35px; padding: 1px 0px; ">
+                        <p style="font-weight: bold; color: #3B3D35; text-align: center;">Causas neurológicas</p>
+                    </div>
+                    <div id="botao_4"
+                        style="border-radius: 13px; background-color: rgb(237, 235, 211); width: 166px; height: 35px; padding: 1px 0px; ">
+                        <p style="font-weight: bold; color: #3B3D35; text-align: center;">Uso de medicamentos</p>
+                    </div>
+                </div>
+                <div
+                    style="border-radius: 18px;background-color: #EDEBD3;width: 760px;height: 220px;margin-top: -6px;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                    <div id="intro">
+                        <p>Para conhecê-las, <b>clique</b> em cada um dos títulos.</p>
+                    </div>
+                    <div id="janela_1" style=" display: none;">
+                        <div style="overflow-y: auto;max-height: 250px;margin-left: 20px; width: 480px;">
+                            <p>A <b>causa vascular</b> mais comum é a aterosclerose das artérias cavernosas do
+                                pênis,
+                                geralmente provocada por tabagismo, disfunção endotelial e diabetes. A aterosclerose
+                                e o
+                                envelhecimento diminuem a capacidade de dilatação dos vasos sanguíneos arteriais e
+                                de
+                                relaxamento dos músculos lisos, limitando a quantidade de sangue que entra no pênis.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="janela_2" style=" display: none;">
+                        <div style="max-height: 250px;margin-left: 20px; width: 480px;">
+                            <p><b>Disfunção endotelial</b> é uma doença do revestimento endotelial das pequenas
+                                arteríolas que reduz a capacidade de vasodilatação quando necessário para aumentar o
+                                fluxo sanguíneo. A disfunção endotelial parece ser mediada por níveis reduzidos de
+                                óxido
+                                nítrico e pode resultar de tabagismo, diabetes e/ou baixos níveis de testosterona.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="janela_3" style=" display: none;">
+                        <div style="overflow-y: auto;max-height: 250px;margin-left: 20px; width: 480px;">
+                            <p>As <b>causas neurológicas</b> incluem acidente vascular encefálico, convulsões
+                                parciais
+                                complexas, esclerose múltipla, neuropatia periférica e autonômica e lesão da medula
+                                espinal. A neuropatia diabética e as lesões cirúrgicas são causas particularmente
+                                comuns.</p>
+                        </div>
+                    </div>
+                    <div id="janela_4" style=" display: none;">
+                        <div style="overflow-y: auto;max-height: 250px;margin-left: 20px; width: 480px;">
+                            <p>O <b>uso de medicamentos</b> como anti-hipertensivos, antidepressivos,
+                                anticonvulsivantes, antiparkinsonianos, entre outros pode interferir na ereção,
+                                devendo
+                                ser sempre considerado como fator causal ou de piora.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="janela_6" class="jan" style=" display: none;">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 30px 30px;display: flex;flex-direction: column;justify-content: center;width: 530px;align-items: center;">
+        <div>
+            <img src="recursos/imgs/DAF_FITO_M3A4_RIM_ilustra08.svg" style="width: 420px;">
+        </div>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<footer style="padding: 0; ">
+    <img src="recursos/imgs/DAF_FITO_M4A3_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').click((e) => {
+            if (e.target.id != 'botao_6') {
+                apagarJanelas();
+            }
+        });
+
+        apagarJanelas();
+        $(document).find('[id^=intro]').show();
+
+        var botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                $(document).find('[id^=intro]').hide();
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+                $(botao).css({ 'background-color': '#E1C99B' });
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+            $(document).find('[id^=botao]').map((index, botao) => {
+                $(botao).css({ 'background-color': '#EDEBD3' });
+            })
+        }
+    })
+</script>

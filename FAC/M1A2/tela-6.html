@@ -1,0 +1,80 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div class="animate__animated animate__backInLeft" style="display: flex; justify-content: center; margin-top: -30px;">
+    <div
+        style="background-color: #ddcaa0;border-radius: 30px;width: 726px;display: flex;align-items: center;justify-content: center;flex-direction: row;border-width: 9px;border-style: double;border-color: white;padding: 10px 20px;">
+        <div style="display: flex;align-items: center;width: 100%;justify-content: space-evenly;">
+            <img src="recursos/icones/DAF_FITO_M1A1_RIM_importante.svg" style="width: 91px;margin-right: 28px;">
+            <div>
+                <p>Observe com atenção os seguintes pontos:</p>
+                <p> • As preparações ou medicamentos magistrais e oficinais e os medicamentos industrializados devem
+                    ser
+                    produzidos em
+                    <b>conformidade com as normas e regulamentos</b> estabelecidos pela Anvisa para garantir a
+                    qualidade, eficácia e segurança dos produtos.
+                </p>
+                <p>• Os medicamentos magistrais e os oficinais devem seguir as boas práticas de preparação e
+                    dispensação, enquanto os medicamentos industrializados devem seguir as boas práticas de
+                    fabricação,
+                    além da norma de registro de medicamentos fitoterápicos e de registro e notificação de
+                    medicamentos
+                    tradicionais fitoterápicos.</p>
+                <p>• Somente será permitida a <b>notificação</b> como medicamento tradicional fitoterápico aquele
+                    com
+                    <span style="background-color: #BCAA8A;"><a
+                            href="https://www.in.gov.br/en/web/dou/-/resolucao-n-948-de-12-de-dezembro-de-2024-602258881"
+                            target="_blank" style="color: black; text-decoration: underline; cursor: pointer;"
+                            id="hotWord-bt"><b>Insumo
+                                Farmacêutico Ativo (IFA) vegetal<sup>1</sup></b></a></span> listado na última edição
+                    do
+                    Formulário
+                    de Fitoterápicos da
+                    Farmacopeia Brasileira e que possua monografia específica de controle da qualidade publicada em
+                    farmacopeia reconhecida pela Anvisa.
+                </p>
+                <p>• Os medicamentos tradicionais fitoterápicos não devem se destinar a tratar doenças, distúrbios,
+                    condições ou referir ações que sejam consideradas graves, não podem conter matérias-primas em
+                    concentração de risco tóxico conhecido e não devem ser administrados pelas vias injetável e
+                    oftálmica.</p>
+                <p>
+                    • <b>Substâncias ativas isoladas ou altamente purificadas</b>, sejam elas sintéticas,
+                    semissintéticas ou naturais, ou <b>associações dessas com outros extratos</b>, sejam eles
+                    vegetais
+                    ou de outras fontes, como a animal, <b>não são considerados fitoterápicos</b>. Logo, a exemplo
+                    da
+                    curcumina, substância ativa isolada de <i>Curcuma longa</i> L. (cúrcuma), não é fitoterápico,
+                    mas
+                    sim <b>fitofármaco</b>, por ser substância isolada de origem vegetal.
+                </p>
+            </div>
+            <p style="position: absolute;font-size: 9px;top: 360px;">
+                Fonte: Brasil, 2025.
+            </p>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0; ">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="conteudo"
+    style="position: absolute; background-color: rgb(188, 170, 138); top: 300px; right: 370px; width: 475px; border-radius: 16px; padding: 16px 13px; display: none;">
+    <p style="font-size: 10px;"><b><sup>1</sup>Insumo Farmacêutico Ativo (IFA) vegetal</b>: insumo farmacêutico
+        ativo
+        obtido a partir de planta medicinal, droga vegetal ou preparação vegetal, exceto substâncias isoladas ou
+        altamente purificadas (RDC nº 1.004/2025).
+
+    </p>
+</div>
+<script>
+    $(() => {
+        let conteudo = $('#conteudo').hide();
+        $('#hotWord-bt').css('cursor', 'pointer').hover(() => {
+            conteudo.fadeIn()
+        })
+        $('#hotWord-bt').mouseout(() => {
+            conteudo.fadeOut()
+        })
+    })
+</script>

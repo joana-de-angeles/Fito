@@ -1,0 +1,64 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="121px" height="122px" viewBox="0 0 121 122">
+<defs>
+<g id="Layer0_0_MEMBER_0_MEMBER_0_FILL">
+<path fill="#EDEBD3" stroke="none" d="
+M 500.9 130.4
+L 383.15 130.4 383.15 249.8 500.9 249.8 500.9 130.4 Z"/>
+</g>
+
+<g id="Layer0_0_MEMBER_1_MEMBER_0_MEMBER_0_MEMBER_0_MEMBER_0_MEMBER_0_FILL">
+<path fill="#CDA55F" stroke="none" d="
+M 59.8 82.55
+L 63.5 74.15 103.15 176.65 88.35 176.65 88.35 182.9 145.25 182.9 145.25 176.65 132.6 176.65 73 35.1 53.8 82.55 59.8 82.55 Z"/>
+</g>
+
+<g id="Layer0_0_MEMBER_1_MEMBER_0_MEMBER_1_MEMBER_0_MEMBER_0_MEMBER_0_FILL">
+<path fill="#9FA934" stroke="none" d="
+M 20.45 186.5
+Q 52.85 182.9 71.3 157.25 86.55 131.55 83.4 102.7
+L 81.8 102.95 20.45 186.5 Z"/>
+</g>
+
+<g id="Layer0_0_MEMBER_1_MEMBER_0_MEMBER_1_MEMBER_0_MEMBER_0_MEMBER_1_FILL">
+<path fill="#B9BF79" stroke="none" d="
+M 34.5 129.55
+Q 14.9 154.5 20.45 186.5
+L 81.8 102.95
+Q 54.2 108.35 34.5 129.55 Z"/>
+</g>
+
+<g id="Layer0_0_MEMBER_1_MEMBER_0_MEMBER_2_MEMBER_0_MEMBER_0_MEMBER_0_FILL">
+<path fill="#95A36E" stroke="none" d="
+M 152.4 86.5
+Q 151.7 92 147.65 96 142.85 100.9 136 100.9
+L 113.05 100.9 116.2 108.4 136 108.4
+Q 142.85 108.4 147.65 113.2 151.7 117.25 152.4 122.8
+L 152.4 130.05 158.9 130.05 158.9 79.2 152.4 79.2 152.4 86.5
+M 166.3 72.6
+L 175.95 72.6 175.95 31.8 84.25 31.8 84.25 32.45 87.95 41.3 142.05 41.3
+Q 152.15 41.3 159.15 48.4 166.3 55.55 166.3 65.55
+L 166.3 72.6 Z"/>
+</g>
+</defs>
+
+<g transform="matrix( 1.02679443359375, 0, 0, 1.02679443359375, -393.35,-134.2) ">
+<use xlink:href="#Layer0_0_MEMBER_0_MEMBER_0_FILL"/>
+</g>
+
+<g transform="matrix( 0.482757568359375, 0, 0, 0.482757568359375, 13.35,8.25) ">
+<use xlink:href="#Layer0_0_MEMBER_1_MEMBER_0_MEMBER_0_MEMBER_0_MEMBER_0_MEMBER_0_FILL"/>
+</g>
+
+<g transform="matrix( 0.482757568359375, 0, 0, 0.482757568359375, 13.35,8.25) ">
+<use xlink:href="#Layer0_0_MEMBER_1_MEMBER_0_MEMBER_1_MEMBER_0_MEMBER_0_MEMBER_0_FILL"/>
+</g>
+
+<g transform="matrix( 0.482757568359375, 0, 0, 0.482757568359375, 13.35,8.25) ">
+<use xlink:href="#Layer0_0_MEMBER_1_MEMBER_0_MEMBER_1_MEMBER_0_MEMBER_0_MEMBER_1_FILL"/>
+</g>
+
+<g transform="matrix( 0.482757568359375, 0, 0, 0.482757568359375, 13.35,8.25) ">
+<use xlink:href="#Layer0_0_MEMBER_1_MEMBER_0_MEMBER_2_MEMBER_0_MEMBER_0_MEMBER_0_FILL"/>
+</g>
+</svg>

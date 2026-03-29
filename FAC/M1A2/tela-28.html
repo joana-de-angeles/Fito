@@ -1,0 +1,67 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div>
+    <div style="display: flex;align-items: center;height: 320px;justify-content: space-around;">
+        <div style="width: 460px;">
+            <h1>Da necessidade ou isenção de prescrição médica para fitoterápicos</h1>
+
+            <p style="margin-top: 20px;">De acordo com a <a
+                    href="https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&link=S&tipo=RDC&numeroAto=00000882&seqAto=000&valorAno=2024&orgao=RDC/DC/ANVISA/MS&cod_modulo=310&cod_menu=9431"
+                    target="_blank">RDC nº 882, de 14 de junho de 2024</a>, alguns medicamentos,
+                incluindo os fitoterápicos, podem ser considerados <b>medicamentos sob prescrição</b>, enquanto outros
+                são
+                considerados <b>isentos de prescrição</b>. A necessidade ou não de prescrição médica é determinada
+                <b style="text-decoration: underline;">
+                    principalmente pela indicação (condição clínica que se pretende tratar), mas também o perfil de
+                    segurança, a duração do uso
+                </b>, entre outros, mais do que o medicamento em si.
+            </p>
+
+        </div>
+        <div class="animate__animated animate__backInRight">
+            <img src="recursos/imgs/DAF_FITO_M1A2_RIM_ilustra20.svg " style="width: 292px;margin-right: -2px;">
+        </div>
+    </div>
+</div>
+<footer style="padding: 0; ">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="conteudo_1"
+    style="position: absolute;background-color: #BCAA8A;top: 260px;left: 80px;width: 337px;border-radius: 16px;padding: 16px 13px;">
+    <p style="font-size: 10px;">
+        produtos obtidos de planta medicinal, ou de seus derivados, exceto substâncias isoladas, com finalidade
+        profilática, curativa ou paliativa (Paiva <em>et al</em>., 2014).
+    </p>
+</div>
+<div id="conteudo_2"
+    style="position: absolute;background-color: #BCAA8A;top: 260px;left: 80px;width: 315px;border-radius: 16px;padding: 16px 13px;">
+    <p style="font-size: 10px;">
+        substância purificada e isolada a partir de matéria-prima vegetal com estrutura química conhecida e atividade
+        farmacológica definida. Os fitofármacos não são considerados fitoterápicos e devem atender a legislação para
+        medicamentos sintéticos. Além disso, não são considerados fitofármacos os compostos isolados que sofram qualquer
+        etapa de semissíntese ou modificação de sua estrutura química. Um exemplo de fitofármaco é a digoxina, que é
+        utilizada no tratamento de problemas cardíacos. É um digitálico, ou seja, um glicosídeo cardiotônico,
+        proveniente de plantas do gênero Digitalis, sobretudo <em>Digitalis purpurea L</em>. e <em>Digitalis lanata
+            Ehrh</em> (Brasil, Anvisa, 2014a).
+    </p>
+</div>
+<script>
+    $(() => {
+        let conteudo1 = $('#conteudo_1').hide();
+        let conteudo2 = $('#conteudo_2').hide();
+        $('#hotWord-bt_1').css('cursor', 'pointer').hover(() => {
+            conteudo1.fadeIn()
+        })
+        $('#hotWord-bt_1').mouseout(() => {
+            conteudo1.fadeOut()
+        })
+        $('#hotWord-bt_2').css('cursor', 'pointer').hover(() => {
+            conteudo2.fadeIn()
+        })
+        $('#hotWord-bt_2').mouseout(() => {
+            conteudo2.fadeOut()
+        })
+    })
+</script>

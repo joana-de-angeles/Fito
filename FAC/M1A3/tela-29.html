@@ -1,0 +1,385 @@
+<style lang="scss">
+    .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 1rem auto;
+        position: relative;
+        width: fit-content;
+        justify-content: center;
+
+        &.winner:before {
+            content: "Win!";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .box {
+            display: flex;
+            border: 0.4rem solid rgb(0 128 128 / 50%);
+            border-top-width: 0;
+            border-top-color: transparent;
+            height: 15rem;
+            width: 3rem;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            margin: 0.5rem;
+            position: relative;
+            box-shadow: inset -0.2rem -0.2rem 10px rgb(0 128 128 / 50%);
+            background-color: rgb(0 128 128 / 10%);
+            box-sizing: content-box;
+
+            &.selected .item:first-child {
+                margin-bottom: auto;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 4.6rem;
+                background-color: rgb(0 128 128 / 30%);
+                height: 1.2rem;
+                top: 0;
+                border-radius: 0.5rem;
+                box-shadow: inset -0.2rem -0.2rem 10px rgb(0 128 128 / 20%);
+                backdrop-filter: blur(5px);
+            }
+
+            &.complited:after {
+                content: "";
+                position: absolute;
+                height: 3rem;
+                width: 3.2rem;
+                background-color: brown;
+                z-index: -1;
+                top: -0.5rem;
+            }
+        }
+
+        .item {
+            display: flex;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            margin-bottom: 0;
+            transition-duration: 0.5s;
+            transition-property: margin;
+            z-index: -1;
+
+            box-shadow: inset -0.2rem -0.2rem 12px rgb(0 0 0 / 50%);
+
+            &.type-1 {
+                background-color: crimson;
+            }
+
+            &.type-2 {
+                background-color: yellowgreen;
+            }
+
+            &.type-3 {
+                background-color: gold;
+            }
+
+            &.type-4 {
+                background-color: deepskyblue;
+            }
+
+            &.type-5 {
+                background-color: royalblue;
+            }
+
+            &.type-6 {
+                background-color: hotpink;
+            }
+
+            &.type-7 {
+                background-color: cyan;
+            }
+
+            &.type-8 {
+                background-color: darkviolet;
+            }
+
+            &.type-9 {
+                background-color: forestgreen;
+            }
+
+            &.type-10 {
+                background-color: orangered;
+            }
+        }
+    }
+</style>
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div class="coluna-esquerda largura-1_1"
+    style="display: flex;justify-content: center;align-items: center; height: 320px;flex-direction: column;">
+    <div style="width: 80%;">
+        <p>Para aprender mais sobre interação medicamentosa, organize as bolinhas por cores nos tubos a seguir.
+            <b>Clique</b> em cada bolinha e, em seguida, clique no tubo em que você deseja colocá-la.
+            Atenção! Apenas as bolinhas das mesmas cores permanecerão juntas.
+        </p>
+        <div style="display: flex;align-items: center;justify-content: space-around;">
+            <div id="app">
+                <div class="boxes"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1" class="jan">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 45px 30px;display: flex;flex-direction: column;justify-content: center;width: 520px;align-items: center;">
+        <p>Uma <b>interação</b> ocorre quando <b>o efeito de um fármaco é alterado pela presença de outra
+                substância</b>, incluindo aquelas presentes nos fitocomplexos dos fitoterápicos. Os diferentes
+            compostos
+            químicos presentes nos fitoterápicos podem interagir entre si (no processo chamado de
+            <b>endointeração</b>)
+            e com
+            outros compostos presentes em alimentos e, principalmente, outros medicamentos (<b>exointeração</b>).
+            Conhecer estes fenômenos é importante para o profissional de saúde, que deve evitar associações com
+            interações entre si, e estar sempre atento a esta possibilidade caso não haja, na literatura, dados
+            suficientes.
+        </p>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<div id="janela_2" class="jan">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 45px 30px;display: flex;flex-direction: column;justify-content: center;width: 520px;align-items: center;">
+        <p>As interações medicamentosas podem ser tanto positivas quanto negativas. As <b>interações positivas</b>
+            levam
+            a um
+            efeito maior do que seria esperado com o uso individual de cada medicamento isolado. As <b>interações
+                negativas</b>
+            ocorrem quando há redução do efeito do medicamento, normalmente levando à redução da eficácia. No caso
+            dos
+            fitoterápicos, essas interações podem ser benéficas, potencializando ou complementando seus efeitos
+            terapêuticos, ou prejudiciais, potencializando reações adversas ou toxicidade.</p>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<div id="janela_3" class="jan">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 45px 30px;display: flex;flex-direction: column;justify-content: center;width: 520px;align-items: center;">
+        <p>Vale ressaltar a importância de estar atento a essas interações. Existem ferramentas eletrônicas que
+            auxiliam
+            os profissionais na prática clínica para a identificação das potenciais interações: Drugs.com;
+            Micromedex;
+            Uptodate; Phitoteca. Cabe observar que são <b>potenciais</b> interações, que clinicamente devem ser
+            observados os
+            sinais e sintomas para avaliação de cada caso e, se necessário, ponderar a relação risco e benefício. As
+            endointerações que ocorrem entre os compostos presentes em fitocomplexos, normalmente por sinergismo ou
+            potenciação farmacocinética, resultam em efeitos terapêuticos mais intensos ou mais amplos do que
+            aqueles
+            que seriam esperados pelo efeito isolado de cada composto. As endointerações normalmente são benéficas.
+        </p>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<div id="janela_4" class="jan">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 45px 30px;display: flex;flex-direction: column;justify-content: center;width: 520px;align-items: center;">
+        <p>As exointerações entre fitoterápicos também são comuns, e podem ocorrer por sinergismo ou potenciação
+            farmacocinética. Um exemplo de sinergismo em fitoterapia é a combinação de <i>Valeriana officinalis</i>
+            (<i>Caprifoliaceae</i>, valeriana) com <i>Humulus lupulus</i> (<i>Cannabaceae</i>, lúpulo) no tratamento
+            de
+            distúrbios do sono.
+            Estudos mostram que a combinação dessas plantas tem um efeito sedativo mais potente do que cada uma
+            isoladamente, devido à interação entre os compostos presentes em cada planta. Um exemplo de potenciação
+            farmacocinética ocorre quando associamos <i>Curcuma longa</i> (<i>Zingiberaceae</i>, cúrcuma) e <i>Piper
+                nigrum</i> (<i>Piperaceae</i>,
+            pimenta-do-reino). A piperina aumenta a biodisponibilidade da curcumina.</p>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<div id="janela_5" class="jan">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 45px 30px;display: flex;flex-direction: column;justify-content: center;width: 520px;align-items: center;">
+        <p>Há interações medicamentosas que podem ocorrer entre fitoterápicos e outros medicamentos (também são
+            exointerações). Algumas dessas interações são bem conhecidas e documentadas na literatura científica,
+            enquanto outras ainda estão sendo estudadas. Por exemplo, <i>Hypericum perforatum</i>
+            (<i>Hypericaceae</i>,
+            hipérico) é um
+            fitoterápico frequentemente usado como antidepressivo.</p>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<div id="janela_6" class="jan">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 45px 30px;display: flex;flex-direction: column;justify-content: center;width: 520px;align-items: center;">
+        <p>No entanto, sabe-se que o <i>Hypericum perforatum</i> pode interagir com muitos medicamentos, incluindo antidepressivos, anticonvulsivantes, anticoagulantes, imunossupressores e contraceptivos orais. Isso ocorre porque o
+            hipérico
+            pode induzir o metabolismo de muitos medicamentos no fígado, o que pode diminuir a eficácia desses e
+            aumentar o risco de efeitos colaterais. Outro exemplo é a interação entre <i>Ginkgo biloba</i>
+            (<i>Ginkgoaceae</i>,
+            ginkgo) e anticoagulantes como a varfarina.</p>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<div id="janela_7" class="jan">
+    <div
+        style="position: absolute;background-color: rgb(237, 235, 211);border-radius: 16px;padding: 45px 30px;display: flex;flex-direction: column;justify-content: center;width: 520px;align-items: center;">
+        <p>O <i>ginkgo</i> pode aumentar o risco de sangramento quando usado em conjunto com anticoagulantes, e isso
+            ocorre
+            pela inibição da agregação plaquetária e por interferir com a coagulação sanguínea. Da mesma forma,
+            <i>Serenoa repens</i> (<i>Arecaceae</i>, <i>saw palmetto</i>) pode interagir com medicamentos
+            anticoagulantes e antiplaquetários,
+            aumentando o risco de sangramento. Outro fitoterápico que pode interferir na coagulação é <i>Allium
+                sativum</i>
+            (<i>Amaryllidaceae</i>, alho), o qual pode aumentar o efeito dos medicamentos anticoagulantes,
+            aumentando o
+            risco
+            de sangramento. Também pode interagir com medicamentos para controle de diabetes, aumentando o risco de
+            hipoglicemia.
+        </p>
+        <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+            style="position: absolute;top: 9px;right: 7px;width: 20px;">
+    </div>
+</div>
+<script>
+    $(function () {
+        var contador = 0;
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').click(apagarJanelas);
+        apagarJanelas();
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+
+        let boxes = [],
+            selected = -1,
+            types = 7; // 5 tipos + 2 tubos vazios = 7 tubos
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function createGame() {
+            boxes = [];
+            let items = [];
+            for (let i = 1; i <= 4; i++) {
+                for (let j = 1; j <= types; j++) {
+                    items.push({ type: j });
+                }
+            }
+            items = shuffleArray(items);
+
+            for (let i = 0; i < types + 2; i++) {
+                boxes.push({
+                    items: items.splice(0, 4),
+                    complited: false
+                });
+            }
+            renderBoxes();
+        }
+
+        function renderBoxes() {
+            const $boxes = $(".boxes").empty().removeClass("winner");
+
+            boxes.forEach((box, i) => {
+                const $box = $("<div>").addClass("box").attr("data-index", i);
+                if (i === selected) $box.addClass("selected");
+                if (box.complited) $box.addClass("complited");
+
+                box.items.forEach(item => {
+                    $box.append($("<div>").addClass("item").addClass("type-" + item.type));
+                });
+
+                $boxes.append($box);
+            });
+
+            if (getCompleted() === types) {
+                // $boxes.addClass("winner");
+            }
+        }
+
+        function getCompleted() {
+            let completedTypes = 0;
+            let showJanela = false;
+
+            boxes.forEach(box => {
+                if (box.items.length === 0) {
+                    box.complited = false;
+                    return;
+                }
+                const type = box.items[0].type;
+                const allSame = box.items.every(item => item.type === type);
+                if (allSame && box.items.length === 4) {
+                    if (!box.complited) showJanela = true; // só mostra se for completado agora
+                    box.complited = true;
+                    completedTypes++;
+                } else {
+                    box.complited = false;
+                }
+            });
+
+            if (showJanela) {
+                // $("#janela_1").fadeIn();
+                $(janelas[contador]).fadeIn();
+                contador++;
+            }
+
+            return completedTypes;
+        }
+
+
+        $(".boxes").on("click", ".box", function () {
+            const target = $(this).data("index");
+            if (selected === -1) {
+                selected = target;
+            } else {
+                if (selected === target) {
+                    selected = -1;
+                } else {
+                    const selectedBox = boxes[selected];
+                    const targetBox = boxes[target];
+
+                    if (selectedBox.items.length > 0) {
+                        const selectedItem = selectedBox.items[0];
+                        const targetTop = targetBox.items[0];
+
+                        if (
+                            targetBox.items.length === 0 ||
+                            (targetBox.items.length < 4 && selectedItem.type === targetTop?.type)
+                        ) {
+                            targetBox.items.unshift(selectedBox.items.shift());
+                            selected = -1;
+                        } else {
+                            selected = target;
+                        }
+                    } else {
+                        selected = target;
+                    }
+                }
+            }
+            renderBoxes();
+        });
+
+        createGame();
+    });
+</script>

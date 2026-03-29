@@ -1,0 +1,216 @@
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 20px);
+        grid-template-rows: repeat(10, 20px);
+        gap: 7px;
+        width: auto;
+    }
+
+    .cell {
+        width: 40px;
+        height: 40px;
+        background-color: #ded8a7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        border: 1px solid #a9a27e;
+        text-transform: uppercase;
+    }
+
+    .empty {
+        background-color: transparent;
+        border: none;
+    }
+
+    .input-cell {
+        width: 20px;
+        height: 20px;
+        background-color: #ded8a7;
+        border: 1px solid #a9a27e;
+        text-align: center;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .word-list {
+        margin-top: -90px;
+        margin-left: -460px;
+        padding: 10px;
+        background-color: #ded8a7;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    button {
+        margin-top: 20px;
+        margin-left: -460px;
+        padding: 10px;
+        background-color: #a9a27e;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div class="coluna-esquerda largura-1_1"
+    style="display: flex;justify-content: center;align-items: center; height: 297px; flex-direction: column;">
+    <div style="width: 77%;">
+        <p>Agora, esclareceremos alguns conceitos abordados que se referem tanto à origem das espécies vegetais quanto à
+            forma de acesso a elas. Quanto ao acesso, há duas formas principais: cultivo (seguido de colheita) e
+            extrativismo (também chamado de coleta, embora haja certa confusão entre os termos). <b>Complete</b> a
+            cruzadinha digitando cada um dos termos no local correto.</p>
+        <br>
+    </div>
+    <div class="grid">
+        <input class="input-cell" maxlength="1" style=" grid-column: 6;grid-row: 1;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 6;grid-row: 2;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 6;grid-row: 3;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 6;grid-row: 4;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 6;grid-row: 5;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 6;grid-row: 6;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 6;grid-row: 7;">
+
+        <input class="input-cell" maxlength="1" style=" grid-column: 1;grid-row: 4;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 2;grid-row: 4;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 3;grid-row: 4;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 4;grid-row: 4;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 5;grid-row: 4;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 7;grid-row: 4;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 8;grid-row: 4;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 9;grid-row: 4;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 10;grid-row: 4;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 11;grid-row: 4;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 12;grid-row: 4;">
+
+        <input class="input-cell" maxlength="1" style=" grid-column: 12;grid-row: 3;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 12;grid-row: 5;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 12;grid-row: 6;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 12;grid-row: 7;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 12;grid-row: 8;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 12;grid-row: 9;">
+        <input class="input-cell" maxlength="1" style=" grid-column: 12;grid-row: 10;">
+    </div>
+    <div class="word-list">
+        CULTIVO<br>
+        EXTRATIVISMO<br>
+        COLHEITA
+    </div>
+    <!-- <button onclick="checkAnswers()">Verificar Respostas</button> -->
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="janela_1"
+    style="position: absolute;background-color: rgb(237, 235, 211);top: 233px;left: 172px;width: 520px;border-radius: 16px;padding: 14px;cursor: pointer;">
+    <div>
+        <p>
+            O <b>cultivo</b> é o processo de preparação e uso da terra para o plantio de culturas agrícolas. Isso inclui
+            uma série de atividades que vão desde a aragem, semeadura, irrigação, manejo de pragas, até a colheita das
+            plantas cultivadas. O cultivo pode envolver tanto métodos tradicionais, como a agricultura de subsistência,
+            quanto técnicas modernas de agricultura intensiva e sustentável (FAO, 2020).
+        </p>
+    </div>
+    <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg" style="position: absolute;top: 9px;right: 7px;width: 20px;">
+</div>
+<div id="janela_2"
+    style="position: absolute;background-color: rgb(237, 235, 211);top: 233px;left: 172px;width: 520px;border-radius: 16px;padding: 14px;cursor: pointer;">
+    <div>
+        <p>
+            O <b>extrativismo</b> é a atividade produtiva baseada na retirada ou coleta de matérias-primas ou produtos
+            naturais não cultivados como, por exemplo, madeiras da floresta, frutas, fibras etc. utilizados para consumo
+            ou comercialização. Recomenda-se que o extrativismo seja realizado com plano de manejo, a fim de que seja
+            sustentável, respeitando a renovação dos recursos naturais. Por sua vez, o termo coleta pode se referir à
+            ação de recolher o que foi cultivado ou extraído na natureza, ou seja, um termo utilizado por ambos os
+            sistemas (cultivo ou extrativismo), mas é mais comumente associado ao extrativismo.
+        </p>
+    </div>
+    <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg" style="position: absolute;top: 9px;right: 7px;width: 20px;">
+</div>
+<div id="janela_3"
+    style="position: absolute;background-color: rgb(237, 235, 211);top: 233px;left: 172px;width: 520px;border-radius: 16px;padding: 14px;cursor: pointer;">
+    <div>
+        <p>
+            A <b>colheita</b> diz respeito à atividade agrícola de apanha de produtos e que finaliza o ciclo de
+            operações do trabalho de campo em um sistema de produção agrícola (cultivo). A colheita pode ser realizada
+            de três formas principais: manual, mecanizada ou semimecanizada (parte feita à mão e outra parte por
+            máquinas).
+        </p>
+    </div>
+    <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg" style="position: absolute;top: 9px;right: 7px;width: 20px;">
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+
+        function apagarJanelas() {
+            janelas.each((index, janela) => {
+                $(janela).hide();
+            });
+        }
+
+        // Índices finais de cada palavra na sequência
+        const wordBoundaries = [6, 17, 24]; // índices finais: "CULTIVO", "EXTRATIVISMO", "COLHEITA"
+        const correctAnswers = "CULTIVOEXTRAIVISMOCLHEITA".split("");
+
+        // Inicializa os inputs
+        $(".input-cell").each(function (index) {
+            $(this).on("focus", function () {
+                this.select();
+            });
+
+            $(this).on("input", function () {
+                if ($(this).val().length === 1) {
+                    const nextInput = $(".input-cell").eq(index + 1);
+                    if (nextInput.length) {
+                        nextInput.focus();
+                    }
+
+                    // Se é o fim de uma palavra, verifica ela
+                    const boundaryIndex = wordBoundaries.indexOf(index);
+                    if (boundaryIndex !== -1) {
+                        checkWord(index, boundaryIndex); // Passa também qual é a "janela" correspondente
+                    }
+                }
+            });
+        });
+
+        // Verifica uma palavra até o índice final informado
+        function checkWord(endIndex, janelaIndex) {
+            let startIndex = 0;
+            for (let i = 0; i < wordBoundaries.length; i++) {
+                if (wordBoundaries[i] === endIndex) {
+                    if (i > 0) startIndex = wordBoundaries[i - 1] + 1;
+                    break;
+                }
+            }
+
+            let wordCorrect = true;
+            for (let i = startIndex; i <= endIndex; i++) {
+                const input = $(".input-cell").eq(i);
+                const val = input.val().toUpperCase();
+                if (val !== correctAnswers[i]) {
+                    wordCorrect = false;
+                    break;
+                }
+            }
+
+            if (wordCorrect) {
+                for (let i = startIndex; i <= endIndex; i++) {
+                    $(".input-cell").eq(i).css("background-color", "#a9e6a9");
+                }
+
+                // Exibe a janela correspondente à palavra
+                console.log(janelaIndex);
+
+                $(janelas[janelaIndex]).fadeIn();
+            }
+        }
+    })
+
+</script>

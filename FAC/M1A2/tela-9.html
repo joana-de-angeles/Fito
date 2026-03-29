@@ -1,0 +1,80 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div class="coluna-esquerda largura-1_1"
+    style="display: flex;justify-content: center;align-items: center; height: 320px;flex-direction: column;">
+    <div style="width: 83%;">
+        <h1>Formas farmacêuticas básicas </h1>
+        <p>
+            Os fitoterápicos podem ser disponibilizados na forma de <span style="background-color: #BCAA8A;"><a
+                    style="color: black;" id="hotWord-bt_1">droga vegetal</a></span> inteira, rasurada, triturada ou
+            pulverizada, ou de <span style="background-color: #BCAA8A;"><a style="color: black;"
+                    id="hotWord-bt_2">derivado vegetal (ou preparação vegetal)</a></span>, como tinturas e extratos
+            fluidos ou secos, de maneira
+            isolada ou ainda incorporada em veículos nas diversas formas farmacêuticas. <b>Observe</b> nas Figuras as
+            diferentes formas da droga vegetal e do derivado vegetal que compõem o fitoterápico.
+        </p>
+        <p style="font-weight: bold;text-align: center;margin-top: 20px;margin-bottom: 10px;font-size: 10px;">
+            Diferentes formas da
+            droga vegetal e do derivado vegetal que compõem o
+            fitoterápico</p>
+        <div style="display: flex;align-items: center;justify-content: space-around;">
+            <img class="animate__animated animate__backInLeft" src="recursos/imgs/DAF_FITO_M1A2_RIM_ilustra03.svg"
+                style="width: 249px;">
+            <img class="animate__animated animate__backInRight" src="recursos/imgs/DAF_FITO_M1A2_RIM_ilustra04.svg"
+                style="width: 249px;">
+        </div>
+    </div>
+</div>
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="conteudo_1"
+    style="position: absolute;background-color: #BCAA8A;top: 145px;left: 280px;width: 237px;border-radius: 16px;padding: 16px 13px;">
+    <p style="font-size: 10px;">
+        <b>Droga vegetal</b>: são plantas inteiras ou suas partes, que contenham as substâncias responsáveis pela ação
+        terapêutica, geralmente secas, não processadas, podendo estar íntegras ou fragmentadas. Também se incluem
+        exsudatos, tais como gomas, resinas, mucilagens, látex e ceras, que não foram submetidos a tratamento específico
+        (Brasil, Anvisa, 2013; 2025).
+    </p>
+</div>
+
+<div id="conteudo_2"
+    style="position: absolute;background-color: #BCAA8A;top: 145px;right: 40px;width: 635px;border-radius: 16px;padding: 16px 13px;">
+    <p style="font-size: 10px;">
+        <b>Derivado vegetal</b>: produto da extração da planta medicinal fresca ou da droga vegetal, que contenha as
+        substâncias responsáveis pela ação terapêutica, podendo ocorrer na forma de extrato, óleo fixo e volátil, cera,
+        exsudato e outros (Brasil, Anvisa, 2013, 2025).
+    </p>
+    <p style="font-size: 10px;">A RDC 1.004/2025 substituiu este conceito pelo conceito de preparação vegetal, que são
+        "preparações homogêneas,
+        obtidas a partir de drogas vegetais submetidas a tratamentos específicos, como extração, destilação, expressão,
+        fracionamento, purificação, concentração ou fermentação, por exemplo: extratos, óleos, sucos expressos,
+        exsudatos
+        processados e drogas vegetais que foram submetidas à redução de tamanho para uma aplicação específica, como
+        drogas vegetais rasuradas para elaboração de chás medicinais ou pulverizadas para encapsulamento" (Brasil,
+        Anvisa, 2025).
+    </p>
+    <p style="font-size: 10px;">Embora a RDC 1.004/2025 seja aplicada aos fitoterápicos industrializados, as normas para
+        fitoterápicos
+        manipulados continuam com o conceito de derivado vegetal até o momento.</p>
+</div>
+<script>
+    $(() => {
+        let conteudo1 = $('#conteudo_1').hide();
+        let conteudo2 = $('#conteudo_2').hide();
+        $('#hotWord-bt_1').css('cursor', 'pointer').hover(() => {
+            conteudo1.fadeIn()
+        })
+        $('#hotWord-bt_1').mouseout(() => {
+            conteudo1.fadeOut()
+        })
+        $('#hotWord-bt_2').css('cursor', 'pointer').hover(() => {
+            conteudo2.fadeIn()
+        })
+        $('#hotWord-bt_2').mouseout(() => {
+            conteudo2.fadeOut()
+        })
+    })
+</script>

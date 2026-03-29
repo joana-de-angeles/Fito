@@ -1,0 +1,103 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_06_t.svg" style="width: 100%; margin-top: 10px;position: relative;
+    z-index: -1;">
+</div>
+<div style="display: flex;flex-direction: column;justify-content: center;align-items: center;margin-top: 40px;">
+    <div style="width: 70%;display: flex;flex-direction: column;">
+        <p style="margin-top: 40px;">Quanto à origem das espécies vegetais, são utilizados dois conceitos
+            principais:
+            nativa e exótica. <b>Clique</b> sobre os títulos.</p>
+        <br><br>
+        <div class="animate__animated animate__backInLeft"
+            style="display: flex;flex-wrap: wrap;justify-content: space-evenly;align-items: center;gap: 10px; ">
+            <div>
+                <p id="botao_1"
+                    style="color: rgb(255, 255, 255);background-color: rgb(148, 162, 110);border-radius: 10px;padding: 10px;text-align: center;cursor: pointer;width: 120px;">
+                    <b>NATIVA</b>
+                </p>
+
+                <!-- <p style="color: #67714b; background-color:#EDEBD3; border-radius: 10px; padding: 10px; text-align: center;"><b>PINUS (<em>PINUS SPP</em>.)</b></p> -->
+            </div>
+            <div>
+                <p id="botao_2"
+                    style="color: rgb(255, 255, 255);background-color: rgb(148, 162, 110);border-radius: 10px;padding: 10px;text-align: center;cursor: pointer;width: 120px;">
+                    <b>EXÓTICA</b>
+                </p>
+
+                <!-- <p style="color: #67714b; background-color:#EDEBD3; border-radius: 10px; padding: 10px; text-align: center;"><b>IPÊ AMARELO</b></p> -->
+            </div>
+
+        </div>
+    </div>
+    <div>
+        <div id="janela_1"
+            style="position: absolute; background-color: rgb(237, 235, 211); top: 233px; left: 172px; width: 520px; border-radius: 16px; padding: 14px; cursor: pointer; display: none;">
+            <div>
+                <p>
+                    São denominadas <b>nativas</b> as espécies que ocorrem naturalmente em um dado local, devendo
+                    sua
+                    presença na área à sua própria capacidade dispersiva e competência ecológica. Algumas delas têm
+                    uma
+                    distribuição geográfica mais ampla (expansiva, migrante ou colonizadora), enquanto outras são
+                    mais
+                    restritas, ou seja, endêmicas daquele local e, por isso, mais sujeitas à extinção. As espécies
+                    nativas podem ser <b>espontâneas ou cultivadas</b>.
+                </p>
+            </div>
+            <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+                style="position: absolute;top: 9px;right: 7px;width: 20px;">
+        </div>
+        <div id="janela_2"
+            style="position: absolute; background-color: rgb(237, 235, 211); top: 202px; left: 172px; width: 520px; border-radius: 16px; padding: 14px; cursor: pointer; display: none;">
+            <div>
+                <p>Quanto às <b>exóticas</b>, são espécies que não ocorreriam naturalmente em uma dada região
+                    geográfica sem o transporte humano (intencional ou acidentalmente) para a nova região. Algumas
+                    delas conseguem se reproduzir de modo consistente no local onde foram introduzidas, de modo a
+                    estabelecer uma população autoperpetuante sem a necessidade da intervenção humana direta, mas que,
+                    entretanto, não se dispersaram para longe do local de introdução – são conhecidas como exóticas
+                    naturalizadas. São muitas vezes confundidas com espécies nativas do Brasil, pela população, por
+                    crescerem espontaneamente e já existirem no ambiente em que vivem desde o período colonial. Outras
+                    são conceituadas como <b>exóticas cultivadas</b> que, ao contrário das naturalizadas, necessitam da
+                    intervenção para reprodução e manutenção no ambiente (Moro <i>et al</i>., 2012; Ormond, 2006).
+                </p>
+            </div>
+            <img src="recursos/icones/DAF_FITO_M1A1_RIM_close.svg"
+                style="position: absolute;top: 9px;right: 7px;width: 20px;">
+        </div>
+    </div>
+</div>\
+<footer style="padding: 0;">
+    <img src="recursos/imgs/DAF_FITO_M1A1_RIM01_07_b.svg" style="width: 100%; z-index: -1;  position: relative;">
+</footer>
+<div id="conteudo"
+    style="position: absolute; background-color: rgb(200, 187, 165); top: 276px; right: 220px; width: 265px; border-radius: 16px; padding: 16px 13px; display: none;">
+    <p style="font-size: 10px;"><i><b>Droga vegetal</b></i>: consiste na planta medicinal, ou suas partes, que
+        contenham
+        as substâncias responsáveis pela ação terapêutica, após processos de coleta/colheita, estabilização, quando
+        aplicável, e secagem, podendo estar na forma íntegra, rasurada, triturada ou pulverizada.</p>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        let botoes = $(document).find('[id^=botao]').css('cursor', 'pointer').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+
+        let conteudo = $('#conteudo').hide();
+        $('#hotWord-bt').css('cursor', 'pointer').hover(() => {
+            conteudo.fadeIn()
+        })
+        $('#hotWord-bt').mouseout(() => {
+            conteudo.fadeOut()
+        })
+    })
+</script>
